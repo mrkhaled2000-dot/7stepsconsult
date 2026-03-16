@@ -1,82 +1,1157 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>شركة الخطوات السبع للاستشارات</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</title>
+  <meta
+    name="description"
+    content="شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال - نضمن الوضوح قبل الالتزام. تحليل المخاطر، ما قبل التقاضي، التأمين والتعويضات، والاستشارات الاستراتيجية."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+    :root{
+      --navy:#081936;
+      --navy-2:#0d2550;
+      --blue:#1d4ed8;
+      --blue-soft:#eaf1ff;
+      --gold:#b8925f;
+      --text:#18212f;
+      --muted:#5d6778;
+      --bg:#f5f7fb;
+      --white:#ffffff;
+      --line:#e7ebf2;
+      --card:#ffffff;
+      --shadow:0 12px 32px rgba(10,25,54,.08);
+      --radius:22px;
+      --radius-sm:14px;
+      --max:1200px;
+    }
 
-body{
-font-family: Arial;
-background:#f5f7fa;
-margin:0;
-text-align:center;
-direction:rtl;
-}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-header{
-background:#0f172a;
-color:white;
-padding:60px 20px;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-h1{
-font-size:40px;
-margin-bottom:20px;
-}
+    body{
+      font-family:"Tajawal", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
 
-p{
-font-size:20px;
-color:#444;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#1e40af;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
-}
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-section{
-padding:60px 20px;
-}
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
 
-</style>
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(231,235,242,.9);
+    }
+
+    .topbar-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .brand-name{
+      font-size:1.2rem;
+      font-weight:800;
+      color:var(--navy);
+    }
+
+    .brand-tag{
+      font-size:.92rem;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:.96rem;
+      color:var(--text);
+      transition:.2s ease;
+      font-weight:600;
+    }
+
+    .nav a:hover{
+      background:var(--blue-soft);
+      color:var(--blue);
+    }
+
+    .nav-cta{
+      background:var(--navy);
+      color:var(--white) !important;
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at top right, rgba(184,146,95,.22), transparent 30%),
+        radial-gradient(circle at left center, rgba(29,78,216,.16), transparent 25%),
+        linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color:var(--white);
+      padding:88px 0 70px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.14);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.92rem;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-size:clamp(2rem, 4vw, 3.65rem);
+      line-height:1.25;
+      font-weight:900;
+      margin-bottom:18px;
+      letter-spacing:-0.5px;
+    }
+
+    .hero h1 span{
+      color:#d9e6ff;
+      display:block;
+      font-size:.68em;
+      margin-top:10px;
+      font-weight:700;
+    }
+
+    .hero p{
+      color:rgba(255,255,255,.88);
+      font-size:1.08rem;
+      max-width:760px;
+      margin-bottom:26px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px;
+      margin-bottom:28px;
+    }
+
+    .point{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:.97rem;
+      color:#eff4ff;
+      font-weight:500;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:52px;
+      padding:0 24px;
+      border-radius:14px;
+      font-weight:800;
+      transition:.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--blue);
+      color:var(--white);
+      box-shadow:0 10px 25px rgba(29,78,216,.3);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      background:#1742ba;
+    }
+
+    .btn-light{
+      background:rgba(255,255,255,.08);
+      border-color:rgba(255,255,255,.18);
+      color:var(--white);
+    }
+
+    .btn-light:hover{
+      background:rgba(255,255,255,.13);
+    }
+
+    .hero-contact{
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+      font-size:.97rem;
+      color:rgba(255,255,255,.82);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h3{
+      font-size:1.2rem;
+      margin-bottom:10px;
+      color:#fff;
+    }
+
+    .hero-card p{
+      font-size:.98rem;
+      margin-bottom:16px;
+    }
+
+    .mini-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .mini-item{
+      background:rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:14px 16px;
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .mini-item strong{
+      display:block;
+      margin-bottom:4px;
+      color:#fff;
+      font-size:.98rem;
+    }
+
+    section{
+      padding:72px 0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin:0 auto 34px;
+      text-align:center;
+    }
+
+    .section-head h2{
+      font-size:clamp(1.7rem, 3vw, 2.6rem);
+      line-height:1.3;
+      color:var(--navy);
+      margin-bottom:12px;
+      font-weight:900;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:1.04rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card .icon{
+      width:54px;
+      height:54px;
+      border-radius:18px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:16px;
+      font-size:1.4rem;
+      font-weight:900;
+    }
+
+    .card h3{
+      font-size:1.18rem;
+      color:var(--navy);
+      margin-bottom:10px;
+      font-weight:800;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:.99rem;
+      margin-bottom:14px;
+    }
+
+    .details-link{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:var(--blue);
+      font-weight:800;
+      font-size:.96rem;
+    }
+
+    .why{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .why-box{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .why-box h3{
+      color:var(--navy);
+      font-size:1.35rem;
+      margin-bottom:14px;
+      font-weight:900;
+    }
+
+    .why-box p{
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+
+    .check-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .check-list li{
+      list-style:none;
+      background:#f9fbff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--text);
+      font-weight:500;
+    }
+
+    .services-detailed{
+      display:grid;
+      gap:18px;
+    }
+
+    .service-detail{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .service-detail h3{
+      color:var(--navy);
+      margin-bottom:8px;
+      font-size:1.18rem;
+      font-weight:800;
+    }
+
+    .service-detail p{
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+
+    .service-detail ul{
+      display:grid;
+      gap:8px;
+      margin-top:8px;
+      padding-right:18px;
+    }
+
+    .service-detail li{
+      color:var(--text);
+    }
+
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .price-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+
+    .price-card.featured{
+      border:2px solid var(--blue);
+      transform:translateY(-4px);
+    }
+
+    .badge{
+      position:absolute;
+      top:18px;
+      left:18px;
+      background:var(--blue);
+      color:#fff;
+      font-size:.83rem;
+      font-weight:800;
+      padding:7px 11px;
+      border-radius:999px;
+    }
+
+    .price-card h3{
+      color:var(--navy);
+      font-size:1.22rem;
+      margin-bottom:10px;
+      font-weight:900;
+    }
+
+    .price{
+      color:var(--blue);
+      font-size:2rem;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .price small{
+      color:var(--muted);
+      font-size:.95rem;
+      font-weight:500;
+    }
+
+    .price-card p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .price-card ul{
+      display:grid;
+      gap:10px;
+      list-style:none;
+      margin-bottom:22px;
+    }
+
+    .price-card li{
+      padding:10px 12px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      color:var(--text);
+      font-size:.96rem;
+    }
+
+    .note-box{
+      margin-top:20px;
+      background:#fff9f1;
+      border:1px solid #f0dfc5;
+      color:#76562a;
+      border-radius:18px;
+      padding:16px 18px;
+      font-size:.96rem;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .about-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-card h3{
+      color:var(--navy);
+      font-size:1.3rem;
+      margin-bottom:12px;
+      font-weight:900;
+    }
+
+    .about-card p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+    }
+
+    .stat{
+      background:#f8fbff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .stat strong{
+      display:block;
+      color:var(--blue);
+      font-size:1.8rem;
+      font-weight:900;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.94rem;
+      font-weight:600;
+    }
+
+    .contact-box{
+      background:linear-gradient(135deg, var(--navy), var(--navy-2));
+      color:var(--white);
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-box h2{
+      font-size:2rem;
+      margin-bottom:12px;
+      font-weight:900;
+    }
+
+    .contact-box p{
+      color:rgba(255,255,255,.86);
+      margin-bottom:20px;
+      max-width:780px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:16px;
+      margin-bottom:20px;
+    }
+
+    .contact-item{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .contact-item strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .contact-item span, .contact-item a{
+      color:#eef4ff;
+      word-break:break-word;
+    }
+
+    .contact-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn-white{
+      background:#fff;
+      color:var(--navy);
+      font-weight:900;
+    }
+
+    .btn-whatsapp{
+      background:#1fa855;
+      color:#fff;
+      font-weight:900;
+    }
+
+    footer{
+      padding:28px 0 42px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      z-index:40;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#1fa855;
+      color:#fff;
+      box-shadow:0 12px 24px rgba(31,168,85,.32);
+      font-size:1.55rem;
+      font-weight:900;
+    }
+
+    @media (max-width: 1050px){
+      .hero-grid,
+      .about-grid,
+      .why,
+      .pricing,
+      .cards,
+      .contact-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .topbar-inner{
+        justify-content:center;
+      }
+
+      .nav{
+        justify-content:center;
+      }
+
+      .hero{
+        padding:70px 0 56px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .why,
+      .pricing,
+      .cards,
+      .contact-grid,
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:2rem;
+      }
+
+      .section-head{
+        margin-bottom:24px;
+      }
+
+      .contact-box{
+        padding:24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-name">شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</div>
+        <div class="brand-tag">نضمن الوضوح قبل الالتزام</div>
+      </div>
 
-<h1>
-شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال
-</h1>
+      <nav class="nav">
+        <a href="#services">الخدمات</a>
+        <a href="#pricing">الباقات</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact" class="nav-cta">تواصل معنا</a>
+      </nav>
+    </div>
+  </div>
 
-<p>
-نضمن الوضوح قبل الالتزام
-</p>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">بيت خبرة استراتيجي لإدارة القرار وتحليل المخاطر</div>
+        <h1>
+          القرار الصحيح لا يبدأ بالحلول… بل بفهم المخاطر أولًا
+          <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع.</span>
+        </h1>
+        <p>
+          شركة الخطوات السبع تعمل في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مصير المشاريع، الشراكات، النزاعات، والاستثمارات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة.
+        </p>
 
-<a class="btn" href="#">
-ابدأ الاستشارة
-</a>
+        <div class="hero-points">
+          <div class="point">تحليل المخاطر قبل القرارات التجارية والاستثمارية</div>
+          <div class="point">خدمة ما قبل التقاضي: تحليل الملف ثم اتخاذ المسار الأنسب</div>
+          <div class="point">استشارات التأمين والتعويضات وإدارة المطالبات</div>
+          <div class="point">باقات مباشرة قابلة للبدء دون تردد</div>
+        </div>
 
-</header>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">ابدأ الآن</a>
+          <a class="btn btn-light" href="#services">استعرض الخدمات</a>
+        </div>
 
-<section>
+        <div class="hero-contact">
+          <div>البريد: info@7stepsconsult.com</div>
+          <div>الهاتف: +966559995535</div>
+        </div>
+      </div>
 
-<h2>
-تحليل المخاطر قبل اتخاذ القرار
-</h2>
+      <div class="hero-card">
+        <h3>لماذا تبدأ بإدارة المخاطر؟</h3>
+        <p>
+          لأن كل مرحلة يمر بها الإنسان أو المؤسسة تحمل خطرًا مختلفًا، والخطر الحقيقي لا يكمن في وجوده فقط، بل في عدم فهمه قبل اتخاذ القرار.
+        </p>
 
-<p>
-نساعد الأفراد والشركات على فهم المخاطر وتفكيك التعقيد قبل الدخول في التزامات أو نزاعات.
-</p>
+        <div class="mini-list">
+          <div class="mini-item">
+            <strong>قبل الشراكة</strong>
+            تحليل الالتزامات، الأدوار، ونقاط الضعف المحتملة.
+          </div>
+          <div class="mini-item">
+            <strong>قبل الاستثمار</strong>
+            تقييم المخاطر والفرص وصناعة صورة أوضح للمشهد.
+          </div>
+          <div class="mini-item">
+            <strong>قبل التقاضي</strong>
+            تفكيك الملف وتحديد المسارات الممكنة دون وعود أو تخمينات.
+          </div>
+          <div class="mini-item">
+            <strong>قبل التوسع</strong>
+            قراءة الأثر المالي والتشغيلي والتنظيمي قبل الالتزام.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-</section>
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>خدماتنا</h2>
+        <p>
+          خدمات مهنية واضحة، تبدأ من الاستشارة السريعة وصولًا إلى التحليل المتقدم والدعم المؤسسي، مع إمكانية معرفة المزيد عن كل خدمة قبل الطلب.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">01</div>
+          <h3>ما قبل التقاضي</h3>
+          <p>
+            تحليل الملفات والنزاعات قبل رفع الدعوى أو المضي في التفاوض أو التسوية، بهدف بناء رؤية أوضح للمشهد.
+          </p>
+          <a class="details-link" href="#prelit">المزيد / تفاصيل</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">02</div>
+          <h3>إدارة المخاطر</h3>
+          <p>
+            قراءة المخاطر وتفكيك عناصرها قبل اتخاذ القرار، سواء في الشراكات أو الاستثمارات أو التوسعات أو التعاقدات.
+          </p>
+          <a class="details-link" href="#risk">المزيد / تفاصيل</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">03</div>
+          <h3>التأمين والتعويضات</h3>
+          <p>
+            دعم مهني في مطالبات التأمين، تقدير الأضرار، قراءة الوثائق، وتحليل النزاعات ذات الصلة بالتأمين والتعويض.
+          </p>
+          <a class="details-link" href="#insurance">المزيد / تفاصيل</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">04</div>
+          <h3>الاستشارات الاستراتيجية</h3>
+          <p>
+            دعم صناع القرار في بناء الصورة الشاملة، صياغة المسارات، وقراءة التحديات قبل التنفيذ.
+          </p>
+          <a class="details-link" href="#strategy">المزيد / تفاصيل</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">05</div>
+          <h3>تطوير الأعمال</h3>
+          <p>
+            دعم القرارات المرتبطة بالنمو، الشراكات، المنتجات، وتطوير نموذج الأعمال ضمن رؤية عملية متزنة.
+          </p>
+          <a class="details-link" href="#growth">المزيد / تفاصيل</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">06</div>
+          <h3>الاستشارات المباشرة</h3>
+          <p>
+            جلسات سريعة ومركزة للأفراد والشركات لبحث ملف معين أو قرار محدد مع إمكانية الانتقال لاحقًا لخدمة أعمق.
+          </p>
+          <a class="details-link" href="#pricing">المزيد / تفاصيل</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container why">
+      <div class="why-box">
+        <h3>لماذا الخطوات السبع؟</h3>
+        <p>
+          في البيئات المعقدة، لا تنشأ معظم الخسائر من ضعف الإمكانات، بل من قرارات اتُخذت قبل اكتمال الصورة. من هنا جاءت فلسفتنا: لا يبدأ المسار بخطوة متسرعة، بل بمنهج قرار.
+        </p>
+        <ul class="check-list">
+          <li>نركز على المرحلة التي تسبق الالتزام، لا بعد وقوع المشكلة فقط.</li>
+          <li>نمزج بين التحليل الإداري والتجاري والمخاطر والتأمين والتعويضات.</li>
+          <li>نصيغ رؤية مهنية تساعد العميل على اتخاذ القرار بثقة أكبر.</li>
+          <li>نقدم خدمات تبدأ بباقات بسيطة وتتصاعد حسب الحاجة الفعلية.</li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <h3>كيف ننظر إلى الخطر؟</h3>
+        <p>
+          الخطر ليس حدثًا فقط، بل مسارًا يتشكل من قرارات وعلاقات والتزامات وعناصر غير واضحة. لذلك فإن دور خبير المخاطر يسبق أحيانًا أي مستشار آخر، لأنه يبدأ بتفكيك المشهد قبل اقتراح الحل.
+        </p>
+        <ul class="check-list">
+          <li>كل شراكة تحمل خطرًا.</li>
+          <li>كل استثمار يحمل خطرًا.</li>
+          <li>كل نزاع محتمل يحمل خطرًا.</li>
+          <li>والقرار الصحيح يبدأ عندما يُحلل الخطر أولًا.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="prelit">
+    <div class="container">
+      <div class="section-head">
+        <h2>تفاصيل خدمة ما قبل التقاضي</h2>
+        <p>
+          خدمة مصممة لمن يريد فهم ملفه قبل اتخاذ خطوة قضائية أو تفاوضية أو تصعيدية، دون وعود غير مهنية أو تخمينات نيابة عن العميل.
+        </p>
+      </div>
+
+      <div class="services-detailed">
+        <div class="service-detail">
+          <h3>تحليل أولي لقضية قبل التقاضي</h3>
+          <p>
+            نقرأ المستندات الأساسية، نفكك عناصر النزاع، ونوضح المسارات الممكنة قبل المضي في الدعوى أو التفاوض أو التسوية.
+          </p>
+          <ul>
+            <li>قراءة المستندات الأساسية.</li>
+            <li>تحليل عناصر النزاع.</li>
+            <li>تحديد النقاط المؤثرة في الملف.</li>
+            <li>توضيح المخاطر المحتملة في كل خيار.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="risk">
+    <div class="container">
+      <div class="section-head">
+        <h2>إدارة المخاطر</h2>
+        <p>
+          نستعين بمنهج تحليلي يهدف إلى قراءة الخطر قبل وقوعه، وتهيئة القرار قبل أن يتحول إلى التزام أو نزاع أو خسارة.
+        </p>
+      </div>
+
+      <div class="services-detailed">
+        <div class="service-detail">
+          <h3>تحليل وتفكيك الخطر</h3>
+          <p>
+            نساعدك على فهم المخاطر المرتبطة بالقرارات الاستراتيجية، المشاريع، الشراكات، التوسع، والدخول في التزامات جديدة.
+          </p>
+          <ul>
+            <li>قراءة المشهد المؤثر على القرار.</li>
+            <li>تحليل المخاطر التشغيلية والمالية والتنظيمية.</li>
+            <li>بناء صورة أوضح قبل الالتزام.</li>
+            <li>تقديم توصيات مهنية تساعد على التوازن والوضوح.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="insurance">
+    <div class="container">
+      <div class="section-head">
+        <h2>التأمين والتعويضات</h2>
+        <p>
+          خبرة مهنية في قراءة وثائق التأمين، تحليل المطالبات، دعم ملفات التعويض، وتقديم منظور مستقل يساعد العميل على فهم موقفه.
+        </p>
+      </div>
+
+      <div class="services-detailed">
+        <div class="service-detail">
+          <h3>خدمات التأمين والتعويض</h3>
+          <p>
+            نغطي الاحتياجات التي تتعلق بالنزاعات أو المطالبات أو قراءة التغطيات أو تقدير الأضرار ذات الصلة بالتأمين والتعويضات.
+          </p>
+          <ul>
+            <li>مراجعة برامج ووثائق التأمين.</li>
+            <li>تحليل المطالبات التأمينية.</li>
+            <li>تقدير الأضرار والخسائر.</li>
+            <li>المساعدة في بناء ملف مهني للتعويض.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <div class="container">
+      <div class="section-head">
+        <h2>الاستشارات الاستراتيجية</h2>
+        <p>
+          نعمل على تهيئة القرار الاستراتيجي عبر قراءة شاملة للمشهد، وتوضيح الخيارات قبل الانتقال إلى التنفيذ.
+        </p>
+      </div>
+
+      <div class="services-detailed">
+        <div class="service-detail">
+          <h3>دعم القرار وصناعة المسار</h3>
+          <p>
+            الاستشارات هنا لا تبدأ من التنفيذ، بل من بناء الرؤية، وتحديد الأولويات، وقراءة التحديات قبل الالتزام.
+          </p>
+          <ul>
+            <li>تحليل الفرص والتحديات.</li>
+            <li>قراءة السوق وأطراف العلاقة.</li>
+            <li>المساهمة في بناء المسار الأنسب.</li>
+            <li>تهيئة القرار قبل التنفيذ الفعلي.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="growth">
+    <div class="container">
+      <div class="section-head">
+        <h2>تطوير الأعمال</h2>
+        <p>
+          خدمات تدعم النمو المتزن، وتساعد على قراءة خيارات التوسع، وتطوير المنتجات، وبناء نماذج أعمال أكثر نضجًا.
+        </p>
+      </div>
+
+      <div class="services-detailed">
+        <div class="service-detail">
+          <h3>تطوير الأعمال والنماذج</h3>
+          <p>
+            نساعد المنشآت ورواد الأعمال على تحسين المسارات، وقراءة الخيارات، وتطوير النموذج بصورة أكثر اتزانًا ووضوحًا.
+          </p>
+          <ul>
+            <li>قراءة فرص النمو والتوسع.</li>
+            <li>مراجعة نموذج الأعمال.</li>
+            <li>تطوير مسارات الشراكة والتكامل.</li>
+            <li>تحسين وضوح القرار قبل التوسع أو الانطلاق.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="section-head">
+        <h2>الباقات</h2>
+        <p>
+          باقات بسيطة وواضحة تساعد العميل على البدء دون تردد. الخدمات الكبيرة أو الملفات المركبة يمكن أن تنتقل لاحقًا إلى عرض سعر مخصص.
+        </p>
+      </div>
+
+      <div class="pricing">
+        <div class="price-card">
+          <h3>استشارة سريعة</h3>
+          <div class="price">350 <small>ريال</small></div>
+          <p>مناسبة للاستفسارات الأولية والقرارات السريعة.</p>
+          <ul>
+            <li>مدة الجلسة: 30 دقيقة</li>
+            <li>للأفراد ورواد الأعمال</li>
+            <li>توجيه أولي للمسار المناسب</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">اطلب هذه الباقة</a>
+        </div>
+
+        <div class="price-card featured">
+          <div class="badge">الأنسب كبداية</div>
+          <h3>جلسة تحليل ملف</h3>
+          <div class="price">750 <small>ريال</small></div>
+          <p>لفهم مشكلة أو ملف بشكل أعمق قبل اتخاذ القرار.</p>
+          <ul>
+            <li>مدة الجلسة: 60 دقيقة</li>
+            <li>تحليل مختصر للنقاط المؤثرة</li>
+            <li>مناسبة للأفراد والشركات</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">اطلب هذه الباقة</a>
+        </div>
+
+        <div class="price-card">
+          <h3>تحليل أولي قبل التقاضي</h3>
+          <div class="price">1500 <small>ريال</small></div>
+          <p>لمن يريد قراءة مهنية أولية للملف قبل أي خطوة قضائية.</p>
+          <ul>
+            <li>قراءة المستندات الأساسية</li>
+            <li>تفكيك عناصر النزاع</li>
+            <li>توضيح المسارات الممكنة</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">اطلب هذه الباقة</a>
+        </div>
+      </div>
+
+      <div class="note-box">
+        ملاحظة: خدمات إدارة النزاعات الكاملة، تقارير التعويضات، الاستشارات المؤسسية، وبرامج إدارة المخاطر المتقدمة، تكون حسب طبيعة الملف وطلب عرض سعر مخصص.
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>من نحن</h2>
+        <p>
+          شركة سعودية متخصصة في الاستشارات الإدارية وتطوير الأعمال، تعمل في المرحلة التي تسبق الالتزام، حيث تتشكل القرارات المؤثرة على مسار المشاريع واستدامتها.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>فلسفتنا</h3>
+          <p>
+            في بيئات الأعمال المعقدة، لا تكمن التحديات الحقيقية في التنفيذ بقدر ما تكمن في القرار الذي يسبقه. لذلك تقوم فلسفتنا على تهيئة القرار، قراءة المشهد، تحليل المخاطر، وبناء الصورة الشاملة قبل الانتقال إلى الالتزام.
+          </p>
+          <p>
+            نعمل مع الجهات التي تبحث عن الاستقرار، وتواجه إشكاليات، وتسعى إلى النمو والتوسع، وتحتاج إلى وضوح مهني قبل أي خطوة مؤثرة.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>ملامح خبرتنا</h3>
+          <div class="stats">
+            <div class="stat">
+              <strong>28+</strong>
+              <span>سنة خبرة تراكمية</span>
+            </div>
+            <div class="stat">
+              <strong>قبل</strong>
+              <span>الالتزام هو مجال تركيزنا</span>
+            </div>
+            <div class="stat">
+              <strong>مخاطر</strong>
+              <span>تحليل وتفكيك وصناعة وضوح</span>
+            </div>
+            <div class="stat">
+              <strong>قرار</strong>
+              <span>أكثر اتزانًا ووضوحًا</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>ابدأ معنا</h2>
+        <p>
+          سواء كنت تحتاج استشارة مباشرة، أو تحليل ملف قبل التقاضي، أو قراءة مهنية للمخاطر والتأمين والتعويضات، يمكننا البدء بخدمة مناسبة ثم التوسع لاحقًا حسب الحاجة.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>الهاتف</strong>
+            <span>+966559995535</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>البريد الإلكتروني</strong>
+            <a href="mailto:info@7stepsconsult.com">info@7stepsconsult.com</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>واتساب أعمال</strong>
+            <a href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">راسلنا مباشرة</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-white" href="mailto:info@7stepsconsult.com">أرسل بريدًا الآن</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال — جميع الحقوق محفوظة
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer" aria-label="واتساب">
+    ✆
+  </a>
 
 </body>
 </html>
