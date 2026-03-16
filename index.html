@@ -4,384 +4,1153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</title>
-  <meta name="description" content="شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال - نضمن الوضوح قبل الالتزام." />
+  <meta name="description" content="بيت خبرة استراتيجي لإدارة القرار وتحليل المخاطر وتهيئة الدخول الآمن لسوق الأعمال والمشاريع" />
+  <meta name="theme-color" content="#0b1f4d" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --navy:#081936;
-      --navy-2:#0e2958;
-      --blue:#1d4ed8;
-      --gold:#b7925e;
-      --bg:#f6f8fc;
-      --white:#fff;
-      --text:#162133;
-      --muted:#667388;
-      --line:#e7edf5;
-      --soft:#edf4ff;
-      --shadow:0 16px 40px rgba(8,25,54,.08);
-      --r:22px;
-      --max:1200px;
+    :root {
+      --navy: #102b5f;
+      --navy-2: #173877;
+      --navy-3: #0b1f4d;
+      --gold: #b79255;
+      --gold-2: #d7be92;
+      --ink: #13233e;
+      --muted: #62728a;
+      --line: #dde5f0;
+      --bg: #f5f8fc;
+      --card: #ffffff;
+      --success: #16825d;
+      --shadow: 0 16px 40px rgba(16, 43, 95, 0.10);
+      --shadow-soft: 0 10px 30px rgba(16, 43, 95, 0.06);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --container: 1180px;
+      --transition: 0.28s ease;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:"Tajawal",sans-serif;background:var(--bg);color:var(--text);line-height:1.85}
-    a{text-decoration:none;color:inherit}
-    img{display:block;max-width:100%}
-    .container{width:min(var(--max),calc(100% - 32px));margin:auto}
 
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .topbar-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand-logo{width:62px;height:62px;border-radius:16px;background:#fff;padding:6px;object-fit:contain;box-shadow:0 10px 24px rgba(8,25,54,.08)}
-    .brand-text strong{display:block;font-size:1.16rem;color:var(--navy);font-weight:900}
-    .brand-text span{display:block;color:var(--muted);font-size:.94rem;font-weight:600}
-    .nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .nav a{padding:10px 14px;border-radius:999px;font-weight:700;transition:.2s ease}
-    .nav a:hover{background:var(--soft);color:var(--blue)}
-    .nav .cta{background:var(--navy);color:#fff}
-
-    .hero{position:relative;overflow:hidden;padding:76px 0 64px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.72),rgba(8,25,54,.62)),url('hero.jpeg') center/cover no-repeat;opacity:.28}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:.92rem;font-weight:800;margin-bottom:18px}
-    .hero h1{font-size:clamp(2.1rem,4.8vw,4rem);line-height:1.18;font-weight:900;margin-bottom:16px}
-    .hero h1 span{display:block;font-size:.54em;line-height:1.45;color:#dce8ff;margin-top:14px;font-weight:700}
-    .hero p{color:rgba(255,255,255,.9);max-width:760px;margin-bottom:22px;font-size:1.05rem}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:800;transition:.2s ease;border:1px solid transparent}
-    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 28px rgba(29,78,216,.22)}
-    .btn-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
-    .hero-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .meta{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.95rem}
-    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
-    .hero-card-image{position:relative;overflow:hidden;min-height:420px;border-radius:22px}
-    .hero-card-image img{width:100%;height:100%;object-fit:cover}
-    .hero-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,25,54,.84),rgba(8,25,54,.18));display:flex;align-items:flex-end;padding:22px}
-    .hero-card-overlay strong{display:block;font-size:1.18rem;font-weight:900;margin-bottom:6px}
-    .hero-card-overlay span{color:rgba(255,255,255,.88)}
-
-    section{padding:76px 0}
-    .section-head{max-width:780px;text-align:center;margin:0 auto 32px}
-    .section-head h2{font-size:clamp(1.75rem,3vw,2.5rem);color:var(--navy);font-weight:900;margin-bottom:12px}
-    .section-head p{color:var(--muted);font-size:1.03rem}
-
-    .metrics-grid,.services-grid,.pricing-grid,.contact-grid,.stats{display:grid;gap:18px}
-    .metrics-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:-18px}
-    .metric,.service-card,.pricing-card,.content-box,.about-card,.contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
-    .metric{padding:20px}
-    .metric strong{display:block;color:var(--blue);font-size:1.7rem;font-weight:900}
-    .metric span{color:var(--muted);font-weight:700;font-size:.94rem}
-
-    .services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .service-card{padding:24px}
-    .service-icon{width:56px;height:56px;border-radius:18px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:900;margin-bottom:16px}
-    .service-card h3{color:var(--navy);font-size:1.15rem;font-weight:900;margin-bottom:10px}
-    .service-card p{color:var(--muted);margin-bottom:12px}
-    .service-card a{color:var(--blue);font-weight:800}
-
-    .split,.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-    .content-box,.about-card{padding:28px}
-    .content-box h3,.about-card h3{color:var(--navy);font-size:1.28rem;font-weight:900;margin-bottom:12px}
-    .content-box p,.about-card p{color:var(--muted);margin-bottom:16px}
-    .check-list{display:grid;gap:12px}
-    .check-list li{list-style:none;background:#f9fbff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-    .image-box{position:relative;overflow:hidden;min-height:420px;border-radius:28px;box-shadow:var(--shadow)}
-    .image-box img{width:100%;height:100%;object-fit:cover}
-    .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,25,54,.76),rgba(8,25,54,.12));display:flex;align-items:flex-end;padding:24px}
-    .overlay strong{display:block;color:#fff;font-size:1.2rem;font-weight:900;margin-bottom:6px}
-    .overlay span{color:rgba(255,255,255,.88)}
-
-    .details-grid{display:grid;gap:18px}
-    .detail-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-    .detail-card h3{color:var(--navy);font-size:1.14rem;font-weight:900;margin-bottom:8px}
-    .detail-card p{color:var(--muted);margin-bottom:10px}
-    .detail-card ul{padding-right:18px;display:grid;gap:8px}
-
-    .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .pricing-card{position:relative;padding:28px}
-    .pricing-card.featured{border:2px solid var(--blue)}
-    .badge{position:absolute;top:16px;left:16px;background:var(--blue);color:#fff;border-radius:999px;font-size:.82rem;font-weight:900;padding:7px 11px}
-    .pricing-card h3{color:var(--navy);font-size:1.18rem;font-weight:900;margin-bottom:10px}
-    .price{color:var(--blue);font-size:2rem;font-weight:900;margin-bottom:8px}
-    .price small{color:var(--muted);font-size:.95rem}
-    .pricing-card p{color:var(--muted);margin-bottom:14px}
-    .pricing-card ul{display:grid;gap:10px;list-style:none;margin-bottom:20px}
-    .pricing-card li{background:#f9fbff;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
-    .note-box{margin-top:20px;background:#fff9f1;border:1px solid #f0dfc5;color:#76562a;border-radius:18px;padding:16px 18px}
-
-    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .stat{background:#f9fbff;border:1px solid var(--line);border-radius:18px;padding:18px}
-    .stat strong{display:block;color:var(--blue);font-size:1.75rem;font-weight:900;margin-bottom:4px}
-    .stat span{color:var(--muted);font-weight:700;font-size:.94rem}
-
-    .contact-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(8,25,54,.96),rgba(14,41,88,.94));border-radius:30px;box-shadow:var(--shadow)}
-    .contact-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.78),rgba(8,25,54,.72)),url('contact.jpeg') center/cover no-repeat;opacity:.36}
-    .contact-inner{position:relative;z-index:1;color:#fff;padding:36px}
-    .contact-inner h2{font-size:2rem;font-weight:900;margin-bottom:12px}
-    .contact-inner p{color:rgba(255,255,255,.88);margin-bottom:20px;max-width:760px}
-    .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:20px}
-    .contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:18px}
-    .contact-card strong{display:block;margin-bottom:6px}
-    .contact-card span,.contact-card a{color:#eef4ff;word-break:break-word}
-    .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
-
-    footer{text-align:center;color:var(--muted);padding:30px 0 42px;font-size:.95rem}
-    .whatsapp-float{position:fixed;left:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1fa855;color:#fff;font-size:1.55rem;font-weight:900;box-shadow:0 14px 26px rgba(31,168,85,.32)}
-
-    @media (max-width:1100px){
-      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid{grid-template-columns:1fr 1fr}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Cairo", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.9;
+      overflow-x: hidden;
     }
-    @media (max-width:760px){
-      .topbar-inner{justify-content:center}
-      .brand{justify-content:center}
-      .brand-text{text-align:center}
-      .nav{justify-content:center}
-      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid,.hero-meta,.stats{grid-template-columns:1fr}
-      .hero{padding:60px 0 50px}
-      .hero h1{font-size:2rem}
-      .visual-image,.image-box{min-height:320px}
-      .contact-inner{padding:24px}
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .container {
+      width: min(var(--container), calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .section { padding: 90px 0; }
+
+    .section-head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 42px;
+    }
+    .section-head .eyebrow {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(16, 43, 95, 0.08);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.2;
+      color: var(--navy-3);
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #9d7540);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(183, 146, 85, 0.28);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(183, 146, 85, 0.34);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-3px);
+    }
+    .btn-light {
+      background: #fff;
+      color: var(--navy-3);
+      border: 1px solid rgba(16,43,95,0.1);
+      box-shadow: var(--shadow-soft);
+    }
+    .btn-light:hover { transform: translateY(-3px); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(16,43,95,0.08);
+      transition: var(--transition);
+    }
+    .topbar.scrolled { box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
+    .navbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .brand-text {
+      min-width: 0;
+    }
+    .brand-text h1 {
+      font-size: 1.05rem;
+      line-height: 1.25;
+      color: var(--navy-3);
+      font-weight: 900;
+    }
+    .brand-text p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-links a {
+      color: var(--navy-3);
+      font-weight: 800;
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: var(--transition);
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-actions { display: flex; gap: 12px; align-items: center; }
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      color: var(--navy-3);
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 95vh;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(11,31,77,.93) 0%, rgba(11,31,77,.84) 40%, rgba(11,31,77,.55) 100%),
+        url('Contact.jpeg') center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(183,146,85,.20), transparent 24%),
+        radial-gradient(circle at 82% 16%, rgba(76, 126, 255, .14), transparent 22%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 36px;
+      align-items: center;
+      padding: 120px 0 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(10px);
+      margin-bottom: 18px;
+      font-weight: 800;
+      color: #eef3ff;
+      font-size: 0.95rem;
+    }
+    .hero h2 {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+    .hero h2 .accent { color: #f1d8ac; }
+    .hero .lead {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.95);
+      font-weight: 800;
+      margin-bottom: 12px;
+      max-width: 760px;
+    }
+    .hero .desc {
+      color: rgba(255,255,255,0.82);
+      font-size: 1.04rem;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+      max-width: 760px;
+    }
+    .hero-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 78px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      color: #f1f5ff;
+      font-weight: 700;
+    }
+    .hero-point .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(183,146,85,0.18);
+      color: #f1d8ac;
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.20);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      max-width: 540px;
+      margin-inline-start: auto;
+    }
+    .hero-card img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+    .hero-card .floating {
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
+      background: rgba(11,31,77,0.82);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 16px 18px;
+      border-radius: 18px;
+      max-width: 265px;
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-card .floating strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+    .hero-card .floating span {
+      display: block;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .trust-strip { margin-top: -34px; position: relative; z-index: 2; }
+    .trust-box {
+      background: #fff;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .trust-box h3 {
+      color: var(--navy-3);
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .trust-box p { color: var(--muted); }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .trust-item {
+      min-height: 82px;
+      background: linear-gradient(180deg, #fff, #f8fbff);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .services { background: linear-gradient(180deg, #f7fbff 0%, #edf4fb 100%); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid rgba(16,43,95,0.08);
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--navy));
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: rgba(16,43,95,0.08);
+      color: var(--navy-3);
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    .service-card h3 {
+      color: var(--navy-3);
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+    .service-card p { color: var(--muted); font-size: 0.98rem; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .about-media {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .about-media img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
+    .about-panel {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      width: min(320px, calc(100% - 40px));
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.32);
+      box-shadow: var(--shadow-soft);
+      border-radius: 22px;
+      padding: 18px;
+    }
+    .about-panel strong {
+      display: block;
+      color: var(--navy-3);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      font-weight: 900;
+    }
+    .about-panel span { color: var(--muted); font-size: 0.95rem; }
+    .about-tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(183,146,85,0.14);
+      color: #8a6632;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .about-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      color: var(--navy-3);
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 1.03rem;
+    }
+    .about-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .about-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .about-item .tick {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(22,130,93,0.10);
+      color: var(--success);
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+
+    .steps {
+      background: var(--navy-3);
+      color: #fff;
+    }
+    .steps .section-head h2,
+    .steps .section-head p { color: #fff; }
+    .steps .section-head .eyebrow {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.92);
+    }
+    .steps-summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+    .steps-summary .mini {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 20px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 800;
+      color: rgba(255,255,255,0.92);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .step-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      padding: 24px 22px;
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+    .step-card .num {
+      position: absolute;
+      left: 16px;
+      top: 10px;
+      font-size: 3rem;
+      line-height: 1;
+      color: rgba(255,255,255,0.08);
+      font-weight: 900;
+    }
+    .step-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: 900;
+      position: relative;
+      z-index: 1;
+    }
+    .step-card p {
+      color: rgba(255,255,255,0.78);
+      position: relative;
+      z-index: 1;
+      font-size: 0.97rem;
+    }
+
+    .clients-grid,
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .pill-card {
+      min-height: 96px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      color: var(--navy-3);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact {
+      position: relative;
+    }
+    .contact-box {
+      background:
+        linear-gradient(135deg, rgba(11,31,77,.96), rgba(23,56,119,.92)),
+        url('Contact.jpeg') center/cover no-repeat;
+      border-radius: 32px;
+      padding: 54px;
+      color: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 12% 18%, rgba(183,146,85,0.18), transparent 22%);
+      pointer-events: none;
+    }
+    .contact-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .contact-info,
+    .contact-form {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+    }
+    .contact-info h3,
+    .contact-form h3 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+    .contact-info p { color: rgba(255,255,255,0.78); margin-bottom: 20px; }
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      margin-bottom: 22px;
+    }
+    .contact-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+    }
+    .contact-list .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(183,146,85,0.16);
+      color: #f1d8ac;
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+    .whatsapp-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .whatsapp-cta .btn { width: 100%; }
+
+    .form-grid { display: grid; gap: 16px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .field { display: grid; gap: 8px; }
+    .field label { font-weight: 800; }
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      outline: none;
+      transition: var(--transition);
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: rgba(255,255,255,0.58); }
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(241,216,172,0.55);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 0 0 4px rgba(241,216,172,0.08);
+    }
+    .field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .footer {
+      background: #071937;
+      color: rgba(255,255,255,0.86);
+      padding: 26px 0;
+      margin-top: 60px;
+    }
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer p { color: rgba(255,255,255,0.74); }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .footer-links a:hover { color: #fff; }
+
+    .float-whatsapp {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 1001;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 1.45rem;
+      box-shadow: 0 14px 34px rgba(37,211,102,0.28);
+      transition: var(--transition);
+    }
+    .float-whatsapp:hover { transform: translateY(-4px) scale(1.03); }
+
+    @media (max-width: 1150px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .trust-box {
+        grid-template-columns: 1fr;
+      }
+      .services-grid,
+      .steps-summary,
+      .clients-grid,
+      .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-card { margin-inline: auto; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links,
+      .nav-actions { display: none; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .mobile-menu {
+        position: absolute;
+        top: 82px;
+        right: 16px;
+        left: 16px;
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: 16px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+      .mobile-menu.show { display: flex; }
+      .mobile-menu a {
+        padding: 12px 10px;
+        border-radius: 12px;
+        font-weight: 800;
+        color: var(--navy-3);
+      }
+      .mobile-menu a:hover { background: #f4f7fb; }
+      .hero-points,
+      .about-list,
+      .form-row { grid-template-columns: 1fr; }
+      .hero-card img,
+      .about-media img { height: 360px; }
+      .section { padding: 72px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .hero h2 { font-size: 2.45rem; }
+      .services-grid,
+      .steps-summary,
+      .steps-grid,
+      .clients-grid,
+      .sectors-grid,
+      .trust-grid { grid-template-columns: 1fr; }
+      .contact-box { padding: 24px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .trust-box,
+      .service-card,
+      .step-card,
+      .contact-info,
+      .contact-form { padding: 22px 18px; }
+      .brand-text h1 { font-size: 0.96rem; }
     }
   </style>
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <a href="#top" class="brand">
-        <img src="7st.jpg" alt="شعار شركة الخطوات السبع" class="brand-logo">
+  <header class="topbar" id="topbar">
+    <div class="container navbar">
+      <a href="#home" class="brand">
+        <img src="7st.jpg" alt="شعار الخطوات السبع">
         <div class="brand-text">
-          <strong>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</strong>
-          <span>نضمن الوضوح قبل الالتزام</span>
+          <h1>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</h1>
+          <p>نضمن الوضوح قبل الالتزام</p>
         </div>
       </a>
 
-      <nav class="nav">
-        <a href="#services">الخدمات</a>
-        <a href="#pricing">الباقات</a>
-        <a href="#about">من نحن</a>
-        <a href="#contact" class="nav-cta">تواصل معنا</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">الرئيسية</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#steps">منهجيتنا</a></li>
+          <li><a href="#clients">عملاؤنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
       </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/966559995535" target="_blank" class="btn btn-light">واتساب</a>
+        <a href="#contact" class="btn btn-primary">اطلب استشارة أولية</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
     </div>
-  </div>
 
-  <header class="hero" id="top">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">بيت خبرة استراتيجي لإدارة القرار وتحليل المخاطر</div>
-        <h1>
-          القرار الصحيح لا يبدأ بالحلول… بل بفهم المخاطر أولًا
-          <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع.</span>
-        </h1>
-        <p>
-          تعمل شركة الخطوات السبع في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مسار المشاريع، الشراكات، النزاعات، والاستثمارات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">ابدأ الآن</a>
-          <a class="btn btn-light" href="#services">استعرض الخدمات</a>
-        </div>
-
-        <div class="hero-meta">
-          <div class="meta">تحليل المخاطر قبل القرارات التجارية والاستثمارية</div>
-          <div class="meta">خدمة ما قبل التقاضي: تحليل الملف ثم تحديد المسار الأنسب</div>
-          <div class="meta">استشارات التأمين والتعويضات وإدارة المطالبات</div>
-          <div class="meta">باقات مباشرة قابلة للبدء دون تردد</div>
-        </div>
-
-        <div class="hero-contact">
-          <div>البريد: info@7stepsconsult.com</div>
-          <div>الهاتف: +966559995535</div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="visual-card">
-          <div class="visual-image">
-            <img src="hero.jpeg" alt="فريق استشاري سعودي">
-            <div class="hero-card-overlay">
-              <div>
-                <strong>استشارات مبنية على التحليل لا الانطباع</strong>
-                <span>هوية سعودية حديثة، ومنهج مهني يسبق القرار قبل الالتزام.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#about">من نحن</a>
+      <a href="#steps">منهجيتنا</a>
+      <a href="#clients">عملاؤنا</a>
+      <a href="#contact">تواصل معنا</a>
+      <a href="https://wa.me/966559995535" target="_blank" class="btn btn-primary">راسلنا عبر واتساب</a>
     </div>
   </header>
 
-  <section class="metrics">
-    <div class="container metrics-grid">
-      <div class="metric"><strong>28+</strong><span>سنة خبرة تراكمية</span></div>
-      <div class="metric"><strong>قبل</strong><span>الالتزام هو مجال تركيزنا</span></div>
-      <div class="metric"><strong>مخاطر</strong><span>تحليل وتفكيك وصناعة وضوح</span></div>
-      <div class="metric"><strong>قرار</strong><span>أكثر اتزانًا ووضوحًا</span></div>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">بيت خبرة استراتيجي لإدارة القرار وتحليل المخاطر وتهيئة الدخول الآمن لسوق الأعمال والمشاريع</div>
+        <h2>القرار الصحيح لا يبدأ <span class="accent">بالحل</span>... بل بفهم المخاطر أولًا</h2>
+        <p class="lead">نساعدك على قراءة المشهد، تحليل المخاطر، وتهيئة المسار الأنسب قبل الدخول في مشروع أو شراكة أو قرار مؤثر.</p>
+        <p class="desc">الميزة التنافسية في الخطوات السبع ليست فقط في تقديم الاستشارة، بل في قدرتنا على دمج التفكير الاستراتيجي مع إدارة وتحليل المخاطر؛ لنمنحك وضوحًا مهنيًا يسبق الالتزام، ويقلل المفاجآت، ويرفع جودة القرار.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/966559995535" target="_blank" class="btn btn-primary">ابدأ عبر واتساب</a>
+          <a href="#services" class="btn btn-secondary">استعرض الخدمات</a>
+        </div>
+        <div class="hero-points">
+          <div class="hero-point"><div class="icon">✓</div><span>إدارة وتحليل المخاطر قبل الالتزام</span></div>
+          <div class="hero-point"><div class="icon">✓</div><span>تهيئة الدخول الآمن لسوق الأعمال والمشاريع</span></div>
+          <div class="hero-point"><div class="icon">✓</div><span>قراءة شاملة للمشهد المؤسسي والاقتصادي</span></div>
+          <div class="hero-point"><div class="icon">✓</div><span>اختيار المسار الأنسب قبل التوسع أو الشراكة</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="hero.jpeg" alt="اجتماع احترافي لفريق استشاري">
+        <div class="floating">
+          <strong>وضوح يسبق القرار</strong>
+          <span>نحلل التعقيد، نرتب الأولويات، ونحوّل الصورة إلى خيارات قابلة للتنفيذ.</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="services">
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-box">
+        <div>
+          <h3>نخدم جهات تدرك أن الاستقرار والاستدامة لا يتحققان بالحلول الجزئية أو القرارات المتسرعة</h3>
+          <p>نركز على بناء الوضوح، ترتيب الأولويات، وتهيئة القرار بصورة متزنة قبل أي التزام مؤثر.</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-item">شركات كبرى</div>
+          <div class="trust-item">منشآت صغيرة ومتوسطة</div>
+          <div class="trust-item">شركات ناشئة</div>
+          <div class="trust-item">شركات طموحة</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section services" id="services">
     <div class="container">
       <div class="section-head">
-        <h2>خدماتنا</h2>
-        <p>خدمات مهنية واضحة، تبدأ من الاستشارة السريعة وصولًا إلى التحليل المتقدم والدعم المؤسسي، مع هيكل عرض نظيف ومباشر يساعد العميل على اتخاذ القرار بسرعة وثقة.</p>
+        <span class="eyebrow">الخدمات</span>
+        <h2>خدمات احترافية تبني القرار على التحليل... لا على الانطباع</h2>
+        <p>نقدم خدمات تسويقية واضحة ومباشرة تشرح للعميل كيف نضيف قيمة حقيقية منذ اللحظة الأولى.</p>
       </div>
 
       <div class="services-grid">
-        <div class="service-card"><div class="service-icon">01</div><h3>ما قبل التقاضي</h3><p>تحليل الملفات والنزاعات قبل رفع الدعوى أو المضي في التفاوض أو التسوية بهدف بناء رؤية أوضح للمشهد.</p><a href="#prelit">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">02</div><h3>إدارة المخاطر</h3><p>قراءة المخاطر وتفكيك عناصرها قبل اتخاذ القرار، سواء في الشراكات أو الاستثمارات أو التوسعات أو التعاقدات.</p><a href="#risk">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">03</div><h3>التأمين والتعويضات</h3><p>دعم مهني في مطالبات التأمين، تقدير الأضرار، قراءة الوثائق، وتحليل النزاعات ذات الصلة بالتأمين والتعويض.</p><a href="#insurance">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">04</div><h3>الاستشارات الاستراتيجية</h3><p>دعم صناع القرار في بناء الصورة الشاملة، صياغة المسارات، وقراءة التحديات قبل التنفيذ.</p><a href="#strategy">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">05</div><h3>تطوير الأعمال</h3><p>دعم القرارات المرتبطة بالنمو، الشراكات، المنتجات، وتطوير نموذج الأعمال ضمن رؤية عملية متزنة.</p><a href="#growth">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">06</div><h3>الاستشارات المباشرة</h3><p>جلسات سريعة ومركزة للأفراد والشركات لبحث ملف معين أو قرار محدد مع إمكانية الانتقال لاحقًا لخدمة أعمق.</p><a href="#pricing">المزيد / تفاصيل</a></div>
+        <article class="service-card">
+          <div class="service-icon">01</div>
+          <h3>الاستشارات الاستراتيجية</h3>
+          <p>تطوير الاستراتيجيات المؤسسية، التخطيط طويل المدى، وبناء الرؤية التنفيذية القابلة للتحول إلى نتائج.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">02</div>
+          <h3>إدارة وتحليل المخاطر</h3>
+          <p>الميزة التنافسية الأبرز لدينا: تحليل المخاطر، بناء أنظمة الإنذار المبكر، وصياغة مسارات وقائية قبل وقوع التعثر أو الخسارة.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">03</div>
+          <h3>التهيئة الاستراتيجية للدخول الآمن</h3>
+          <p>تهيئة الشركات والمشاريع قبل دخول السوق أو الشراكة عبر قراءة البيئة التنظيمية والمشهد الاقتصادي واختيار المسار الأنسب.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">04</div>
+          <h3>دعم القرار وصياغة السيناريوهات</h3>
+          <p>تطوير نماذج القرار والتحليل الاستراتيجي وربط البدائل بالنتائج المحتملة والتبعات التشغيلية والتنظيمية.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container split">
-      <div class="content-box">
-        <h3>لماذا تبدأ بإدارة المخاطر؟</h3>
-        <p>لأن كل مرحلة يمر بها الإنسان أو المؤسسة تحمل خطرًا مختلفًا، والخطر الحقيقي لا يكمن في وجوده فقط، بل في عدم فهمه قبل اتخاذ القرار. لهذا فإن خبير المخاطر يسبق أحيانًا أي مستشار آخر.</p>
-        <ul class="check-list">
-          <li>قبل الشراكة: تحليل الالتزامات والأدوار ونقاط الضعف المحتملة.</li>
-          <li>قبل الاستثمار: تقييم المخاطر والفرص وصناعة صورة أوضح للمشهد.</li>
-          <li>قبل التقاضي: تفكيك الملف وتحديد المسارات الممكنة دون وعود أو تخمينات.</li>
-          <li>قبل التوسع: قراءة الأثر المالي والتشغيلي والتنظيمي قبل الالتزام.</li>
-        </ul>
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="about.jpeg" alt="صورة عن شركة الخطوات السبع">
+        <div class="about-panel">
+          <strong>خبرة تتجاوز 28 عامًا</strong>
+          <span>فهم عميق للسوق السعودي ومتطلباته ضمن أطر مهنية مستقلة واستشارية.</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="about-tag">من نحن</span>
+        <h2>بيت خبرة استراتيجي يهيئ القرار قبل أن يتحول إلى التزام</h2>
+        <p>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال شركة سعودية متخصصة في الاستشارات الاستراتيجية، إدارة وتحليل المخاطر، والتحول المؤسسي، وتهيئة الدخول الآمن لسوق الأعمال والمشاريع.</p>
+        <p>يتركز دورنا في المرحلة التي تسبق الالتزام؛ حيث تتشكل القرارات المؤثرة على مسار المشاريع واستدامتها، فنقرأ المشهد، نفهم البيئة التنظيمية، نحلل المخاطر، ونقترح المسار الأنسب قبل الدخول أو الشراكة.</p>
+        <p>نمتلك فريقًا قياديًا واستشاريًا بخبرات تراكمية عميقة تجمع بين الاستراتيجية والتطبيق في السوق السعودي، وهو ما يمنح مخرجاتنا عمقًا مهنيًا أعلى من الطرح الاستشاري التقليدي.</p>
+
+        <div class="about-list">
+          <div class="about-item"><div class="tick">✓</div><span>قراءة المشهد المؤسسي والاقتصادي</span></div>
+          <div class="about-item"><div class="tick">✓</div><span>تحليل المخاطر المحتملة وإدارتها</span></div>
+          <div class="about-item"><div class="tick">✓</div><span>فهم البيئة التنظيمية وأطراف العلاقة</span></div>
+          <div class="about-item"><div class="tick">✓</div><span>اختيار المسار الأنسب قبل الالتزام</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" id="steps">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">منهجية الخطوات السبع</span>
+        <h2>لسنا خطوات فقط... بل منهج قرار متكامل</h2>
+        <p>منهجيتنا متدرجة ومترابطة؛ لا يُنتقل فيها من مرحلة إلى أخرى إلا بعد استكمال السابقة بشكل مدروس.</p>
       </div>
 
-      <div class="image-box">
-        <img src="about.jpeg" alt="اجتماع استشاري سعودي">
-        <div class="overlay">
-          <div>
-            <strong>منهج قرار لا مجرد خدمة</strong>
-            <span>ربط بين وضوح الصورة وتحليل المخاطر قبل أي خطوة مؤثرة.</span>
+      <div class="steps-summary">
+        <div class="mini">تحديد الرؤية والأهداف</div>
+        <div class="mini">كشف المخاطر المبكرة</div>
+        <div class="mini">هندسة القرار التنفيذي</div>
+        <div class="mini">تحويل الرؤية إلى تنفيذ</div>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="num">1</div><h3>قراءة المشهد</h3><p>تحليل الوضع العام للمؤسسة أو المشروع وفهم السياق التنظيمي والتجاري والتشغيلي وتحديد نقاط القوة والتحديات الأولية.</p></article>
+        <article class="step-card"><div class="num">2</div><h3>بناء الصورة الشاملة</h3><p>ربط العوامل المؤثرة ببعضها وتمكين صناع القرار من رؤية المشهد الكامل بعيدًا عن القراءات الجزئية أو الانطباعية.</p></article>
+        <article class="step-card"><div class="num">3</div><h3>تحليل المخاطر والصدمات</h3><p>تحديد المخاطر المحتملة وبناء نماذج تحليلها وتفعيل أنظمة الإنذار المبكر والصافرات التحذيرية.</p></article>
+        <article class="step-card"><div class="num">4</div><h3>حماية المركز الداخلي</h3><p>تقديم الاستشارات التي تحمي التماسك المؤسسي والهيكلي وتعزز الاستقرار الداخلي للمؤسسة.</p></article>
+        <article class="step-card"><div class="num">5</div><h3>التهدئة والتأني في القرار</h3><p>التفاعل المهني مع الضغط والصدمات واحتواء التوتر ومنع التسرع في اتخاذ القرارات المصيرية.</p></article>
+        <article class="step-card"><div class="num">6</div><h3>تفعيل نماذج الأداء</h3><p>تصميم وتفعيل نماذج الأداء ومؤشرات القياس وربط القرار بالنتائج المتوقعة على المدى القصير والطويل.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="clients">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">شركاء النجاح</span>
+        <h2>نفخر بخدمة عملاء متنوعين في القطاعين العام والخاص</h2>
+        <p>نلتزم ببناء علاقات طويلة الأمد مع عملائنا، قائمة على الثقة والتميز وتبادل القيمة.</p>
+      </div>
+      <div class="clients-grid">
+        <div class="pill-card">شركات كبرى</div>
+        <div class="pill-card">منشآت صغيرة ومتوسطة</div>
+        <div class="pill-card">شركات ناشئة</div>
+        <div class="pill-card">شركات طموحة</div>
+        <div class="pill-card">شركات تقنية</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sectors">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">القطاعات التي نخدمها</span>
+        <h2>فهم عميق لخصوصية كل قطاع ومتطلباته</h2>
+        <p>نقدم خدماتنا عبر مجموعة واسعة من القطاعات الحيوية في المملكة العربية السعودية.</p>
+      </div>
+      <div class="sectors-grid">
+        <div class="pill-card">القطاع الحكومي وشبه الحكومي</div>
+        <div class="pill-card">التأمين</div>
+        <div class="pill-card">الرعاية الصحية</div>
+        <div class="pill-card">العقار والتطوير</div>
+        <div class="pill-card">المقاولات والمشاريع الكبرى</div>
+        <div class="pill-card">المنشآت الصغيرة والمتوسطة</div>
+        <div class="pill-card">المنشآت قيد الإنشاء أو الناشئة</div>
+        <div class="pill-card">التقنية</div>
+        <div class="pill-card">الهندسة</div>
+        <div class="pill-card">التحول المؤسسي والحوكمة</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>تواصل معنا</h3>
+            <p>ضع بين أيدينا خبرة تتجاوز 28 عامًا في خدمة صناع القرار. ابدأ النقاش معنا من القناة التي تناسبك.</p>
+            <ul class="contact-list">
+              <li><div class="icon">📞</div><div><strong>الجوال</strong><br><span>+966 55 999 5535</span></div></li>
+              <li><div class="icon">💬</div><div><strong>واتساب</strong><br><span>تواصل مباشر وسريع مع فريقنا</span></div></li>
+              <li><div class="icon">✉️</div><div><strong>البريد الإلكتروني</strong><br><span>info@7stepsconsult.com</span></div></li>
+              <li><div class="icon">📍</div><div><strong>الموقع</strong><br><span>الرياض – المملكة العربية السعودية</span></div></li>
+            </ul>
+            <div class="whatsapp-cta">
+              <a href="https://wa.me/966559995535" target="_blank" class="btn btn-primary">راسلنا عبر واتساب</a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>أرسل رسالة أولية</h3>
+            <form class="form-grid" onsubmit="submitToWhatsApp(event)">
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">الاسم</label>
+                  <input type="text" id="name" placeholder="اكتب الاسم" required>
+                </div>
+                <div class="field">
+                  <label for="phone">رقم الجوال</label>
+                  <input type="text" id="phone" placeholder="05xxxxxxxx" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="email">البريد الإلكتروني</label>
+                  <input type="email" id="email" placeholder="name@example.com">
+                </div>
+                <div class="field">
+                  <label for="subject">عنوان الموضوع</label>
+                  <input type="text" id="subject" placeholder="مثال: طلب استشارة استراتيجية" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">الرسالة</label>
+                <textarea id="message" placeholder="اكتب نبذة مختصرة عن المشروع أو القرار أو التحدي الذي ترغب مناقشته" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">إرسال عبر واتساب</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="prelit">
-    <div class="container">
-      <div class="section-head">
-        <h2>تفاصيل خدمة ما قبل التقاضي</h2>
-        <p>خدمة مصممة لمن يريد فهم ملفه قبل اتخاذ خطوة قضائية أو تفاوضية أو تصعيدية، دون وعود غير مهنية أو تخمينات نيابة عن العميل.</p>
-      </div>
-      <div class="detail-grid"><div class="detail-card"><h3>تحليل أولي لقضية قبل التقاضي</h3><p>نقرأ المستندات الأساسية، نفكك عناصر النزاع، ونوضح المسارات الممكنة قبل المضي في الدعوى أو التفاوض أو التسوية.</p><ul><li>قراءة المستندات الأساسية.</li><li>تحليل عناصر النزاع.</li><li>تحديد النقاط المؤثرة في الملف.</li><li>توضيح المخاطر المحتملة في كل خيار.</li></ul></div></div>
-    </div>
-  </section>
-
-  <section id="risk">
-    <div class="container">
-      <div class="section-head">
-        <h2>إدارة المخاطر</h2>
-        <p>نستعين بمنهج تحليلي يهدف إلى قراءة الخطر قبل وقوعه، وتهيئة القرار قبل أن يتحول إلى التزام أو نزاع أو خسارة.</p>
-      </div>
-      <div class="detail-grid"><div class="detail-card"><h3>تحليل وتفكيك الخطر</h3><p>نساعدك على فهم المخاطر المرتبطة بالقرارات الاستراتيجية، المشاريع، الشراكات، التوسع، والدخول في التزامات جديدة.</p><ul><li>قراءة المشهد المؤثر على القرار.</li><li>تحليل المخاطر التشغيلية والمالية والتنظيمية.</li><li>بناء صورة أوضح قبل الالتزام.</li><li>تقديم توصيات مهنية تساعد على التوازن والوضوح.</li></ul></div></div>
-    </div>
-  </section>
-
-  <section id="insurance">
-    <div class="container">
-      <div class="section-head">
-        <h2>التأمين والتعويضات</h2>
-        <p>خبرة مهنية في قراءة وثائق التأمين، تحليل المطالبات، دعم ملفات التعويض، وتقديم منظور مستقل يساعد العميل على فهم موقفه.</p>
-      </div>
-      <div class="detail-grid"><div class="detail-card"><h3>خدمات التأمين والتعويض</h3><p>نغطي الاحتياجات التي تتعلق بالنزاعات أو المطالبات أو قراءة التغطيات أو تقدير الأضرار ذات الصلة بالتأمين والتعويضات.</p><ul><li>مراجعة برامج ووثائق التأمين.</li><li>تحليل المطالبات التأمينية.</li><li>تقدير الأضرار والخسائر.</li><li>المساعدة في بناء ملف مهني للتعويض.</li></ul></div></div>
-    </div>
-  </section>
-
-  <section id="strategy">
-    <div class="container">
-      <div class="section-head">
-        <h2>الاستشارات الاستراتيجية</h2>
-        <p>نعمل على تهيئة القرار الاستراتيجي عبر قراءة شاملة للمشهد، وتوضيح الخيارات قبل الانتقال إلى التنفيذ.</p>
-      </div>
-      <div class="detail-grid"><div class="detail-card"><h3>دعم القرار وصناعة المسار</h3><p>الاستشارات هنا لا تبدأ من التنفيذ، بل من بناء الرؤية، وتحديد الأولويات، وقراءة التحديات قبل الالتزام.</p><ul><li>تحليل الفرص والتحديات.</li><li>قراءة السوق وأطراف العلاقة.</li><li>المساهمة في بناء المسار الأنسب.</li><li>تهيئة القرار قبل التنفيذ الفعلي.</li></ul></div></div>
-    </div>
-  </section>
-
-  <section id="growth">
-    <div class="container">
-      <div class="section-head">
-        <h2>تطوير الأعمال</h2>
-        <p>خدمات تدعم النمو المتزن، وتساعد على قراءة خيارات التوسع، وتطوير المنتجات، وبناء نماذج أعمال أكثر نضجًا.</p>
-      </div>
-      <div class="detail-grid"><div class="detail-card"><h3>تطوير الأعمال والنماذج</h3><p>نساعد المنشآت ورواد الأعمال على تحسين المسارات، وقراءة الخيارات، وتطوير النموذج بصورة أكثر اتزانًا ووضوحًا.</p><ul><li>قراءة فرص النمو والتوسع.</li><li>مراجعة نموذج الأعمال.</li><li>تطوير مسارات الشراكة والتكامل.</li><li>تحسين وضوح القرار قبل التوسع أو الانطلاق.</li></ul></div></div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="container">
-      <div class="section-head">
-        <h2>الباقات</h2>
-        <p>باقات بسيطة وواضحة تساعد العميل على البدء دون تردد. الخدمات الكبيرة أو الملفات المركبة يمكن أن تنتقل لاحقًا إلى عرض سعر مخصص.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card"><h3>استشارة سريعة</h3><div class="price">350 <small>ريال</small></div><p>مناسبة للاستفسارات الأولية والقرارات السريعة.</p><ul><li>مدة الجلسة: 30 دقيقة</li><li>للأفراد ورواد الأعمال</li><li>توجيه أولي للمسار المناسب</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
-        <div class="pricing-card featured"><div class="badge">الأنسب كبداية</div><h3>جلسة تحليل ملف</h3><div class="price">750 <small>ريال</small></div><p>لفهم مشكلة أو ملف بشكل أعمق قبل اتخاذ القرار.</p><ul><li>مدة الجلسة: 60 دقيقة</li><li>تحليل مختصر للنقاط المؤثرة</li><li>مناسبة للأفراد والشركات</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
-        <div class="pricing-card"><h3>تحليل أولي قبل التقاضي</h3><div class="price">1500 <small>ريال</small></div><p>لمن يريد قراءة مهنية أولية للملف قبل أي خطوة قضائية.</p><ul><li>قراءة المستندات الأساسية</li><li>تفكيك عناصر النزاع</li><li>توضيح المسارات الممكنة</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
-      </div>
-      <div class="note-box">ملاحظة: خدمات إدارة النزاعات الكاملة، تقارير التعويضات، الاستشارات المؤسسية، وبرامج إدارة المخاطر المتقدمة، تكون حسب طبيعة الملف وطلب عرض سعر مخصص.</div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <h2>من نحن</h2>
-        <p>شركة سعودية متخصصة في الاستشارات الإدارية وتطوير الأعمال، تعمل في المرحلة التي تسبق الالتزام، حيث تتشكل القرارات المؤثرة على مسار المشاريع واستدامتها.</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-card">
-          <h3>فلسفتنا</h3>
-          <p>في بيئات الأعمال المعقدة، لا تكمن التحديات الحقيقية في التنفيذ بقدر ما تكمن في القرار الذي يسبقه. لذلك تقوم فلسفتنا على تهيئة القرار، قراءة المشهد، تحليل المخاطر، وبناء الصورة الشاملة قبل الانتقال إلى الالتزام.</p>
-          <p>نعمل مع الجهات التي تبحث عن الاستقرار، وتواجه إشكاليات، وتسعى إلى النمو والتوسع، وتحتاج إلى وضوح مهني قبل أي خطوة مؤثرة.</p>
-        </div>
-        <div class="about-card">
-          <h3>ملامح خبرتنا</h3>
-          <div class="stats">
-            <div class="stat"><strong>28+</strong><span>سنة خبرة تراكمية</span></div>
-            <div class="stat"><strong>قبل</strong><span>الالتزام هو مجال تركيزنا</span></div>
-            <div class="stat"><strong>مخاطر</strong><span>تحليل وتفكيك وصناعة وضوح</span></div>
-            <div class="stat"><strong>قرار</strong><span>أكثر اتزانًا ووضوحًا</span></div>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال - جميع الحقوق محفوظة</p>
+      <div class="footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">من نحن</a>
+        <a href="#clients">عملاؤنا</a>
+        <a href="#contact">تواصل معنا</a>
       </div>
     </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="contact-wrap">
-        <div class="contact-inner">
-          <h2>ابدأ معنا</h2>
-          <p>سواء كنت تحتاج استشارة مباشرة، أو تحليل ملف قبل التقاضي، أو قراءة مهنية للمخاطر والتأمين والتعويضات، يمكننا البدء بخدمة مناسبة ثم التوسع لاحقًا حسب الحاجة.</p>
-
-          <div class="contact-grid">
-            <div class="contact-card"><strong>الهاتف</strong><span>+966559995535</span></div>
-            <div class="contact-card"><strong>البريد الإلكتروني</strong><a href="mailto:info@7stepsconsult.com">info@7stepsconsult.com</a></div>
-            <div class="contact-card"><strong>واتساب أعمال</strong><a href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">راسلنا مباشرة</a></div>
-          </div>
-
-          <div class="contact-actions">
-            <a class="btn btn-outline" href="mailto:info@7stepsconsult.com">أرسل بريدًا الآن</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال — جميع الحقوق محفوظة
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer" aria-label="واتساب">✆</a>
+  <a class="float-whatsapp" href="https://wa.me/966559995535" target="_blank" aria-label="واتساب">✆</a>
 
+  <script>
+    const topbar = document.getElementById('topbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) topbar.classList.add('scrolled');
+      else topbar.classList.remove('scrolled');
+    });
+
+    menuToggle?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.offsetHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+
+    function submitToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const text = `السلام عليكم، لدي طلب عبر موقع الخطوات السبع.%0A%0Aالاسم: ${encodeURIComponent(name)}%0Aرقم الجوال: ${encodeURIComponent(phone)}%0Aالبريد الإلكتروني: ${encodeURIComponent(email || 'غير مذكور')}%0Aعنوان الموضوع: ${encodeURIComponent(subject)}%0Aالرسالة: ${encodeURIComponent(message)}`;
+      window.open(`https://wa.me/966559995535?text=${text}`, '_blank');
+    }
+  </script>
 </body>
 </html>
