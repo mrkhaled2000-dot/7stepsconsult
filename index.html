@@ -53,11 +53,15 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:800;transition:.2s ease;border:1px solid transparent}
     .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 28px rgba(29,78,216,.22)}
     .btn-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
+    .btn-dark{background:var(--navy);color:#fff}
+    .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.22)}
+    .btn-whatsapp{background:#1fa855;color:#fff;box-shadow:0 14px 28px rgba(31,168,85,.28)}
     .hero-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     .meta{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.95rem}
-    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
-    .hero-card-image{position:relative;overflow:hidden;min-height:420px;border-radius:22px}
-    .hero-card-image img{width:100%;height:100%;object-fit:cover}
+    .hero-contact{display:flex;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,.86);font-weight:700;font-size:.96rem;margin-top:16px}
+    .visual-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
+    .visual-image{position:relative;overflow:hidden;min-height:420px;border-radius:22px}
+    .visual-image img{width:100%;height:100%;object-fit:cover}
     .hero-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,25,54,.84),rgba(8,25,54,.18));display:flex;align-items:flex-end;padding:22px}
     .hero-card-overlay strong{display:block;font-size:1.18rem;font-weight:900;margin-bottom:6px}
     .hero-card-overlay span{color:rgba(255,255,255,.88)}
@@ -69,7 +73,7 @@
 
     .metrics-grid,.services-grid,.pricing-grid,.contact-grid,.stats{display:grid;gap:18px}
     .metrics-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:-18px}
-    .metric,.service-card,.pricing-card,.content-box,.about-card,.contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+    .metric,.service-card,.pricing-card,.content-box,.about-card,.contact-card,.detail-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
     .metric{padding:20px}
     .metric strong{display:block;color:var(--blue);font-size:1.7rem;font-weight:900}
     .metric span{color:var(--muted);font-weight:700;font-size:.94rem}
@@ -93,8 +97,8 @@
     .overlay strong{display:block;color:#fff;font-size:1.2rem;font-weight:900;margin-bottom:6px}
     .overlay span{color:rgba(255,255,255,.88)}
 
-    .details-grid{display:grid;gap:18px}
-    .detail-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    .detail-grid{display:grid;gap:18px}
+    .detail-card{padding:22px}
     .detail-card h3{color:var(--navy);font-size:1.14rem;font-weight:900;margin-bottom:8px}
     .detail-card p{color:var(--muted);margin-bottom:10px}
     .detail-card ul{padding-right:18px;display:grid;gap:8px}
@@ -117,7 +121,7 @@
     .stat span{color:var(--muted);font-weight:700;font-size:.94rem}
 
     .contact-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(8,25,54,.96),rgba(14,41,88,.94));border-radius:30px;box-shadow:var(--shadow)}
-    .contact-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.78),rgba(8,25,54,.72)),url('contact.jpeg') center/cover no-repeat;opacity:.36}
+    .contact-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.78),rgba(8,25,54,.72)),url('Contact.jpeg') center/cover no-repeat;opacity:.36}
     .contact-inner{position:relative;z-index:1;color:#fff;padding:36px}
     .contact-inner h2{font-size:2rem;font-weight:900;margin-bottom:12px}
     .contact-inner p{color:rgba(255,255,255,.88);margin-bottom:20px;max-width:760px}
@@ -162,7 +166,7 @@
         <a href="#services">الخدمات</a>
         <a href="#pricing">الباقات</a>
         <a href="#about">من نحن</a>
-        <a href="#contact" class="nav-cta">تواصل معنا</a>
+        <a href="#contact" class="cta">تواصل معنا</a>
       </nav>
     </div>
   </div>
@@ -176,7 +180,7 @@
           <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع.</span>
         </h1>
         <p>
-          تعمل شركة الخطوات السبع في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مسار المشاريع، الشراكات، النزاعات، والاستثمارات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة.
+          تعمل شركة الخطوات السبع في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مسار المشاريع، الشراكات، التوسع، والنزاعات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة، مع تركيز أساسي على إدارة المخاطر وصناعة القرار قبل التنفيذ.
         </p>
 
         <div class="hero-actions">
@@ -185,10 +189,10 @@
         </div>
 
         <div class="hero-meta">
-          <div class="meta">تحليل المخاطر قبل القرارات التجارية والاستثمارية</div>
-          <div class="meta">خدمة ما قبل التقاضي: تحليل الملف ثم تحديد المسار الأنسب</div>
-          <div class="meta">استشارات التأمين والتعويضات وإدارة المطالبات</div>
-          <div class="meta">باقات مباشرة قابلة للبدء دون تردد</div>
+          <div class="meta">إدارة المخاطر وصناعة القرار قبل أي التزام مؤثر</div>
+          <div class="meta">ما قبل التقاضي: تحليل الملف ثم تحديد المسار الأنسب</div>
+          <div class="meta">التأمين والتعويضات كخدمة داعمة ضمن منظور مهني مستقل</div>
+          <div class="meta">باقات مباشرة وقابلة للبدء للأفراد والشركات</div>
         </div>
 
         <div class="hero-contact">
@@ -216,7 +220,7 @@
   <section class="metrics">
     <div class="container metrics-grid">
       <div class="metric"><strong>28+</strong><span>سنة خبرة تراكمية</span></div>
-      <div class="metric"><strong>قبل</strong><span>الالتزام هو مجال تركيزنا</span></div>
+      <div class="metric"><strong>خصوصية</strong><span>كاملة في التعامل مع الملفات</span></div>
       <div class="metric"><strong>مخاطر</strong><span>تحليل وتفكيك وصناعة وضوح</span></div>
       <div class="metric"><strong>قرار</strong><span>أكثر اتزانًا ووضوحًا</span></div>
     </div>
@@ -226,16 +230,16 @@
     <div class="container">
       <div class="section-head">
         <h2>خدماتنا</h2>
-        <p>خدمات مهنية واضحة، تبدأ من الاستشارة السريعة وصولًا إلى التحليل المتقدم والدعم المؤسسي، مع هيكل عرض نظيف ومباشر يساعد العميل على اتخاذ القرار بسرعة وثقة.</p>
+        <p>خدمات مهنية واضحة، تبدأ من الاستشارة السريعة وصولًا إلى التحليل المتقدم والدعم المؤسسي، مع ترتيب يوضح أن إدارة المخاطر وصناعة القرار هي المحور الأساسي، وتتفرع منها الخدمات الأخرى بحسب حاجة العميل.</p>
       </div>
 
       <div class="services-grid">
-        <div class="service-card"><div class="service-icon">01</div><h3>ما قبل التقاضي</h3><p>تحليل الملفات والنزاعات قبل رفع الدعوى أو المضي في التفاوض أو التسوية بهدف بناء رؤية أوضح للمشهد.</p><a href="#prelit">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">02</div><h3>إدارة المخاطر</h3><p>قراءة المخاطر وتفكيك عناصرها قبل اتخاذ القرار، سواء في الشراكات أو الاستثمارات أو التوسعات أو التعاقدات.</p><a href="#risk">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">03</div><h3>التأمين والتعويضات</h3><p>دعم مهني في مطالبات التأمين، تقدير الأضرار، قراءة الوثائق، وتحليل النزاعات ذات الصلة بالتأمين والتعويض.</p><a href="#insurance">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">04</div><h3>الاستشارات الاستراتيجية</h3><p>دعم صناع القرار في بناء الصورة الشاملة، صياغة المسارات، وقراءة التحديات قبل التنفيذ.</p><a href="#strategy">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">05</div><h3>تطوير الأعمال</h3><p>دعم القرارات المرتبطة بالنمو، الشراكات، المنتجات، وتطوير نموذج الأعمال ضمن رؤية عملية متزنة.</p><a href="#growth">المزيد / تفاصيل</a></div>
-        <div class="service-card"><div class="service-icon">06</div><h3>الاستشارات المباشرة</h3><p>جلسات سريعة ومركزة للأفراد والشركات لبحث ملف معين أو قرار محدد مع إمكانية الانتقال لاحقًا لخدمة أعمق.</p><a href="#pricing">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">01</div><h3>إدارة المخاطر وصناعة القرار</h3><p>الخدمة المحورية لدينا. نقرأ المشهد، نحلل الاحتمالات، ونساعد العميل على اتخاذ قرار أوضح قبل الدخول في التزام قد تكون تبعاته عالية.</p><a href="#risk">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">02</div><h3>ما قبل التقاضي</h3><p>تحليل الملفات والنزاعات قبل رفع الدعوى أو المضي في التفاوض أو التسوية، بهدف بناء رؤية أوضح للمشهد وتحديد المسار الأكثر اتزانًا.</p><a href="#prelit">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">03</div><h3>التأمين والتعويضات</h3><p>دعم مهني في مطالبات التأمين، تقدير الأضرار، قراءة الوثائق، وتحليل النزاعات ذات الصلة بالتأمين والتعويض ضمن منظور مهني مستقل.</p><a href="#insurance">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">04</div><h3>الاستشارات الاستراتيجية</h3><p>دعم صناع القرار في بناء الصورة الشاملة، ترتيب الأولويات، وقراءة التحديات قبل الانتقال إلى التنفيذ أو التوسع.</p><a href="#strategy">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">05</div><h3>تطوير الأعمال</h3><p>دعم القرارات المرتبطة بالنمو، الشراكات، المنتجات، وتطوير نموذج الأعمال ضمن رؤية عملية متزنة تساعد على التوسع بثقة.</p><a href="#growth">المزيد / تفاصيل</a></div>
+        <div class="service-card"><div class="service-icon">06</div><h3>الاستشارات المباشرة</h3><p>جلسات سريعة ومركزة للأفراد والشركات لبحث ملف معين أو قرار محدد مع إمكانية الانتقال لاحقًا إلى خدمة أعمق عند الحاجة.</p><a href="#pricing">المزيد / تفاصيل</a></div>
       </div>
     </div>
   </section>
@@ -244,7 +248,7 @@
     <div class="container split">
       <div class="content-box">
         <h3>لماذا تبدأ بإدارة المخاطر؟</h3>
-        <p>لأن كل مرحلة يمر بها الإنسان أو المؤسسة تحمل خطرًا مختلفًا، والخطر الحقيقي لا يكمن في وجوده فقط، بل في عدم فهمه قبل اتخاذ القرار. لهذا فإن خبير المخاطر يسبق أحيانًا أي مستشار آخر.</p>
+        <p>لأن كثيرًا من القرارات لا تكون مشكلتها في التنفيذ، بل في عدم قراءة تبعاتها قبل الالتزام. والخطر الحقيقي لا يكمن في وجوده فقط، بل في تجاهله أو التقليل من أثره قبل اتخاذ القرار.</p>
         <ul class="check-list">
           <li>قبل الشراكة: تحليل الالتزامات والأدوار ونقاط الضعف المحتملة.</li>
           <li>قبل الاستثمار: تقييم المخاطر والفرص وصناعة صورة أوضح للمشهد.</li>
@@ -257,10 +261,27 @@
         <img src="about.jpeg" alt="اجتماع استشاري سعودي">
         <div class="overlay">
           <div>
-            <strong>منهج قرار لا مجرد خدمة</strong>
-            <span>ربط بين وضوح الصورة وتحليل المخاطر قبل أي خطوة مؤثرة.</span>
+            <strong>إدارة المخاطر أولًا</strong>
+            <span>ثم تأتي الخدمات الداعمة الأخرى ضمن صورة أوضح وقرار أكثر اتزانًا.</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>حالات من الواقع</h2>
+        <p>نماذج مختصرة تعكس طبيعة القيمة التي يمكن أن تضيفها القراءة المهنية للمشهد قبل التورط في قرار غير مدروس.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card"><h3>شركة متعثرة عادت للسوق</h3><p>شركة كانت متعثرة منذ 2019، ثم أُعيد ترتيب المشهد والقرار والمسار حتى عادت إلى العمل في السوق بصورة أفضل.</p></div>
+        <div class="service-card"><h3>ملف مالي كبير بعد توقف النشاط</h3><p>شركة انتهى نشاطها، لكن القراءة المهنية للملف أعادت بناء موقفها وأصبح لديها مطالبة مالية كبيرة قيد المتابعة.</p></div>
+        <div class="service-card"><h3>شركة تقنية دخلت سوق التأمين</h3><p>شركة تقنية كانت تبحث عن مدخل صحيح إلى سوق التأمين، واليوم لديها منتجات تُعرض وتُباع على شركات التأمين.</p></div>
+        <div class="service-card"><h3>مركز طبي استعاد موقعه التنافسي</h3><p>مركز طبي كان قريبًا من الخروج من المنافسة، ثم أُعيدت قراءة التشغيل والقرار فعاد إلى السوق بشكل أقوى.</p></div>
+        <div class="service-card"><h3>منع خسائر قبل التصعيد</h3><p>شركة كانت ستخسر ملايين قبل التوجه إلى المسار القضائي، ثم أُعيد توجيه القرار وبُني ملف أكثر قوة واتزانًا.</p></div>
+        <div class="service-card"><h3>قرارات أوضح تحت الضغط</h3><p>في حالات كثيرة، القيمة لم تكن في الحل السريع، بل في منع العميل من اتخاذ قرار متسرع تحت ضغط الوقت أو الأطراف الأخرى.</p></div>
       </div>
     </div>
   </section>
@@ -322,9 +343,9 @@
         <p>باقات بسيطة وواضحة تساعد العميل على البدء دون تردد. الخدمات الكبيرة أو الملفات المركبة يمكن أن تنتقل لاحقًا إلى عرض سعر مخصص.</p>
       </div>
       <div class="pricing-grid">
-        <div class="pricing-card"><h3>استشارة سريعة</h3><div class="price">350 <small>ريال</small></div><p>مناسبة للاستفسارات الأولية والقرارات السريعة.</p><ul><li>مدة الجلسة: 30 دقيقة</li><li>للأفراد ورواد الأعمال</li><li>توجيه أولي للمسار المناسب</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
-        <div class="pricing-card featured"><div class="badge">الأنسب كبداية</div><h3>جلسة تحليل ملف</h3><div class="price">750 <small>ريال</small></div><p>لفهم مشكلة أو ملف بشكل أعمق قبل اتخاذ القرار.</p><ul><li>مدة الجلسة: 60 دقيقة</li><li>تحليل مختصر للنقاط المؤثرة</li><li>مناسبة للأفراد والشركات</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
-        <div class="pricing-card"><h3>تحليل أولي قبل التقاضي</h3><div class="price">1500 <small>ريال</small></div><p>لمن يريد قراءة مهنية أولية للملف قبل أي خطوة قضائية.</p><ul><li>قراءة المستندات الأساسية</li><li>تفكيك عناصر النزاع</li><li>توضيح المسارات الممكنة</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
+        <div class="pricing-card"><h3>استشارة سريعة</h3><div class="price">350 <small>ريال</small></div><p>مناسبة للاستفسارات الأولية والقرارات السريعة التي تحتاج إلى توجيه مختصر وواضح قبل الخطوة التالية.</p><ul><li>مدة الجلسة: 30 دقيقة</li><li>للأفراد ورواد الأعمال</li><li>توجيه أولي للمسار المناسب</li><li>لفهم النقطة الأهم بسرعة</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
+        <div class="pricing-card featured"><div class="badge">الأنسب كبداية</div><h3>جلسة تحليل ملف</h3><div class="price">750 <small>ريال</small></div><p>لفهم المشكلة أو القرار بشكل أعمق، مع توضيح النقاط المؤثرة والمخاطر والبدائل بصورة تساعد على اتخاذ قرار أكثر اتزانًا.</p><ul><li>مدة الجلسة: 60 دقيقة</li><li>تحليل مختصر للنقاط المؤثرة</li><li>مناسبة للأفراد والشركات</li><li>توضيح البدائل والمسار الأنسب</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
+        <div class="pricing-card"><h3>تحليل أولي قبل التقاضي</h3><div class="price">1500 <small>ريال</small></div><p>لمن يريد قراءة مهنية أولية للملف قبل أي خطوة قضائية أو تفاوضية، مع تفكيك عناصر النزاع وفهم أثر كل خيار.</p><ul><li>قراءة المستندات الأساسية</li><li>تفكيك عناصر النزاع</li><li>توضيح المسارات الممكنة</li><li>رؤية أولية أكثر نضجًا قبل الالتزام</li></ul><a class="btn btn-dark" href="#contact">اطلب هذه الباقة</a></div>
       </div>
       <div class="note-box">ملاحظة: خدمات إدارة النزاعات الكاملة، تقارير التعويضات، الاستشارات المؤسسية، وبرامج إدارة المخاطر المتقدمة، تكون حسب طبيعة الملف وطلب عرض سعر مخصص.</div>
     </div>
@@ -340,13 +361,13 @@
         <div class="about-card">
           <h3>فلسفتنا</h3>
           <p>في بيئات الأعمال المعقدة، لا تكمن التحديات الحقيقية في التنفيذ بقدر ما تكمن في القرار الذي يسبقه. لذلك تقوم فلسفتنا على تهيئة القرار، قراءة المشهد، تحليل المخاطر، وبناء الصورة الشاملة قبل الانتقال إلى الالتزام.</p>
-          <p>نعمل مع الجهات التي تبحث عن الاستقرار، وتواجه إشكاليات، وتسعى إلى النمو والتوسع، وتحتاج إلى وضوح مهني قبل أي خطوة مؤثرة.</p>
+          <p>نعمل مع الأفراد وأصحاب الشركات والجهات التي تبحث عن الاستقرار، وتواجه إشكاليات، وتسعى إلى النمو والتوسع، وتحتاج إلى وضوح مهني قبل أي خطوة مؤثرة مع التزام كامل بالخصوصية.</p>
         </div>
         <div class="about-card">
           <h3>ملامح خبرتنا</h3>
           <div class="stats">
             <div class="stat"><strong>28+</strong><span>سنة خبرة تراكمية</span></div>
-            <div class="stat"><strong>قبل</strong><span>الالتزام هو مجال تركيزنا</span></div>
+            <div class="stat"><strong>خصوصية</strong><span>كاملة في التعامل مع الملفات</span></div>
             <div class="stat"><strong>مخاطر</strong><span>تحليل وتفكيك وصناعة وضوح</span></div>
             <div class="stat"><strong>قرار</strong><span>أكثر اتزانًا ووضوحًا</span></div>
           </div>
@@ -385,5 +406,3 @@
 
 </body>
 </html>
-- تحسين SEO
-- وربط الباقات بالحجز أو الدفع لاحقًا.
