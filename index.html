@@ -179,6 +179,55 @@
       .story-card img{height:200px}
       .contact-inner,.decision-inner{padding:24px}
     }
+    .clients {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.clients h2 {
+  font-size: 26px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.client-box {
+  background: #f8f9fb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+}
+
+.client-box img {
+  max-height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.client-box img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   </style>
 </head>
 <body>
@@ -275,7 +324,28 @@
       </div>
     </div>
   </section>
+<section class="clients">
+  <div class="container">
+    <h2>Trusted by Leading Organizations</h2>
 
+    <div class="clients-grid">
+      <div class="client-box"><img src="ELM.png" alt="Elm"></div>
+      <div class="client-box"><img src="Emdad.png" alt="Emdad"></div>
+      <div class="client-box"><img src="thabattech.png" alt="Thabat Tech"></div>
+      <div class="client-box"><img src="unique.png" alt="Unique"></div>
+
+      <div class="client-box"><img src="Wattad.png" alt="Wattad"></div>
+      <div class="client-box"><img src="Yaqeen.png" alt="Yaqeen"></div>
+      <div class="client-box"><img src="wajeef.png" alt="Wajeef"></div>
+      <div class="client-box"><img src="Ared.png" alt="Ared"></div>
+
+      <div class="client-box"><img src="Archistra.png" alt="Archistra"></div>
+      <div class="client-box"><img src="Esnad.png" alt="Esnad"></div>
+      <div class="client-box"><img src="Brilliant.png" alt="Brilliant"></div>
+      <div class="client-box"><img src="Watheq.png" alt="Watheq"></div>
+    </div>
+  </div>
+</section>
   <section id="decision">
     <div class="container">
       <div class="decision-wrap">
