@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</title>
-  <meta name="description" content="شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال - نضمن الوضوح قبل الالتزام." />
+  <title>شركة الخطوات السبع للاستشارات وتطوير الأعمال</title>
+  <meta name="description" content="شركة الخطوات السبع للاستشارات وتطوير الأعمال - نضمن الوضوح قبل الالتزام." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -149,7 +149,7 @@
 
     .hero p{
       color:rgba(255,255,255,.92);
-      max-width:520px;
+      max-width:620px;
       margin-bottom:22px;
       font-size:18px;
       line-height:1.9
@@ -238,7 +238,7 @@
     section{padding:78px 0}
 
     .section-head{
-      max-width:800px;
+      max-width:860px;
       text-align:center;
       margin:0 auto 32px
     }
@@ -258,7 +258,8 @@
     .contact-grid,
     .stats,
     .decision-grid,
-    .company-grid{
+    .company-grid,
+    .process-grid{
       display:grid;
       gap:18px
     }
@@ -277,7 +278,8 @@
     .detail-card,
     .decision-box,
     .privacy-box,
-    .company-card{
+    .company-card,
+    .process-card{
       background:#fff;
       border:1px solid var(--line);
       border-radius:var(--r);
@@ -311,6 +313,16 @@
     }
 
     .service-card p{color:var(--muted);margin-bottom:12px}
+    .service-card .service-when{
+      margin-top:10px;
+      background:#f9fbff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--text);
+      line-height:1.8
+    }
+    .service-card .service-when strong{color:var(--navy)}
     .service-card a{color:var(--blue);font-weight:800}
 
     .decision-wrap{
@@ -344,6 +356,13 @@
 
     .decision-box strong{display:block;font-size:1.06rem;margin-bottom:8px}
     .decision-box p{color:rgba(255,255,255,.84)}
+    .decision-prompt{
+      margin-top:18px;
+      color:#fff;
+      font-weight:800;
+      font-size:1.03rem;
+      line-height:1.9
+    }
     .decision-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 
     .split,.about-grid{
@@ -425,6 +444,37 @@
     .story-card h3{color:var(--navy);font-size:1.08rem;font-weight:900;margin-bottom:8px}
     .story-card p{color:var(--muted)}
 
+    .process-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .process-card{padding:24px}
+    .process-step{
+      width:54px;
+      height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:16px;
+      background:var(--soft);
+      color:var(--blue);
+      font-weight:900;
+      margin-bottom:14px;
+      font-size:1.1rem
+    }
+    .process-card h3{color:var(--navy);font-size:1.1rem;font-weight:900;margin-bottom:8px}
+    .process-card p{color:var(--muted)}
+
+    .pricing-guide{
+      text-align:center;
+      margin-bottom:28px
+    }
+    .pricing-guide strong{
+      display:block;
+      color:var(--navy);
+      font-size:1.1rem;
+      font-weight:900;
+      margin-bottom:10px
+    }
+    .pricing-guide p{color:var(--muted);line-height:2}
+
     .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     .pricing-card{position:relative;padding:28px}
     .pricing-card.featured{border:2px solid var(--blue)}
@@ -479,6 +529,15 @@
     }
 
     .stat span{color:var(--muted);font-weight:700;font-size:.94rem}
+    .about-lead{
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:var(--soft);
+      color:var(--navy);
+      font-weight:800;
+      line-height:1.9
+    }
 
     .clients{
       padding:70px 20px;
@@ -719,7 +778,8 @@
       .contact-grid,
       .stories-grid,
       .decision-grid,
-      .company-grid{
+      .company-grid,
+      .process-grid{
         grid-template-columns:1fr 1fr
       }
     }
@@ -767,7 +827,8 @@
       .stats,
       .stories-grid,
       .decision-grid,
-      .company-grid{
+      .company-grid,
+      .process-grid{
         grid-template-columns:1fr
       }
 
@@ -786,7 +847,7 @@
       <a href="#top" class="brand">
         <img src="7st.jpg" alt="شعار شركة الخطوات السبع" class="brand-logo">
         <div class="brand-text">
-          <strong>شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال</strong>
+          <strong>شركة الخطوات السبع للاستشارات وتطوير الأعمال</strong>
           <span>نضمن الوضوح قبل الالتزام</span>
         </div>
       </a>
@@ -809,15 +870,17 @@
 
         <h1>
           القرار الصحيح لا يبدأ بالحلول… بل بفهم المخاطر أولًا
-          <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع أو التزام غير محسوب.</span>
+          <span>
+            نساعدك على تحليل المخاطر وصناعة القرار قبل الدخول في التزام قد يكلفك خسارة مالية أو نزاع قانوني أو مسار غير قابل للتراجع.
+          </span>
         </h1>
 
         <p>
-          تعمل شركة الخطوات السبع في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مسار المشاريع، الشراكات، التوسع، والنزاعات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة، مع تركيز أساسي على إدارة المخاطر وصناعة القرار قبل التنفيذ.
+          نعمل في المرحلة التي تسبق القرار، حيث تتشكل النتائج الحقيقية. نقوم بقراءة المشهد، تفكيك المخاطر، وبناء صورة واضحة تمكّنك من اتخاذ قرار أكثر اتزانًا وثقة قبل أي خطوة مؤثرة.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">ابدأ الآن</a>
+          <a class="btn btn-primary" href="#pricing">احصل على تقييم قرارك الآن</a>
           <a class="btn btn-light" href="#services">استعرض الخدمات</a>
         </div>
 
@@ -861,7 +924,7 @@
 
   <section id="services">
     <div class="container">
-      <div class="section-head services-head">
+      <div class="section-head">
         <h2>خدماتنا</h2>
         <p>خدمات مهنية واضحة، تبدأ من الاستشارة السريعة وصولًا إلى التحليل المتقدم والدعم المؤسسي، مع ترتيب يوضح أن إدارة المخاطر وصناعة القرار هي المحور الأساسي، وتتفرع منها الخدمات الأخرى بحسب حاجة العميل.</p>
       </div>
@@ -871,42 +934,66 @@
           <div class="service-icon">01</div>
           <h3>إدارة المخاطر وصناعة القرار</h3>
           <p>الخدمة المحورية لدينا. نقرأ المشهد، نحلل الاحتمالات، ونساعد العميل على اتخاذ قرار أوضح قبل الدخول في التزام قد تكون تبعاته عالية.</p>
-          <a href="#risk">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما تكون أمام قرار كبير مثل شراكة أو استثمار أو توسع أو التزام مالي، ولا تملك صورة كاملة عن المخاطر أو النتائج المحتملة.
+          </div>
+          <p><a href="#risk">المزيد / تفاصيل</a></p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">02</div>
           <h3>ما قبل التقاضي</h3>
           <p>تحليل الملفات والنزاعات قبل رفع الدعوى أو المضي في التفاوض أو التسوية، بهدف بناء رؤية أوضح للمشهد وتحديد المسار الأكثر اتزانًا.</p>
-          <a href="#prelit">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما تكون أمام نزاع أو مطالبة أو خلاف تجاري، وتريد أن تفهم الملف جيدًا قبل اتخاذ خطوة قضائية أو تفاوضية قد تكون مكلفة.
+          </div>
+          <p><a href="#prelit">المزيد / تفاصيل</a></p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">03</div>
           <h3>التأمين والتعويضات</h3>
           <p>دعم مهني في مطالبات التأمين، تقدير الأضرار، قراءة الوثائق، وتحليل النزاعات ذات الصلة بالتأمين والتعويض ضمن منظور مهني مستقل.</p>
-          <a href="#insurance">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما يكون لديك نزاع تأميني أو مطالبة تعويض أو حاجة إلى قراءة مهنية للوثائق والتغطيات قبل المضي في المطالبة أو الاعتراض.
+          </div>
+          <p><a href="#insurance">المزيد / تفاصيل</a></p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">04</div>
           <h3>الاستشارات الاستراتيجية</h3>
           <p>دعم صناع القرار في بناء الصورة الشاملة، ترتيب الأولويات، وقراءة التحديات قبل الانتقال إلى التنفيذ أو التوسع.</p>
-          <a href="#strategy">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما تكون أمام خيارات متعددة أو مرحلة انتقالية في مشروعك، وتحتاج إلى قراءة أعمق للسوق والأثر قبل التنفيذ.
+          </div>
+          <p><a href="#strategy">المزيد / تفاصيل</a></p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">05</div>
           <h3>تطوير الأعمال</h3>
           <p>دعم القرارات المرتبطة بالنمو، الشراكات، المنتجات، وتطوير نموذج الأعمال ضمن رؤية عملية متزنة تساعد على التوسع بثقة.</p>
-          <a href="#growth">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما تريد تطوير نموذج أعمالك أو تقييم فرصة نمو أو شراكة أو دخول سوق جديد بصورة أكثر نضجًا ووضوحًا.
+          </div>
+          <p><a href="#growth">المزيد / تفاصيل</a></p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">06</div>
           <h3>الاستشارات المباشرة</h3>
           <p>جلسات سريعة ومركزة للأفراد والشركات لبحث ملف معين أو قرار محدد مع إمكانية الانتقال لاحقًا إلى خدمة أعمق عند الحاجة.</p>
-          <a href="#pricing">المزيد / تفاصيل</a>
+          <div class="service-when">
+            <strong>متى تحتاجها؟</strong><br>
+            عندما تحتاج إلى رأي مهني سريع وواضح يساعدك على فهم المسار الصحيح قبل أن تتحول الحالة إلى ملف أكبر.
+          </div>
+          <p><a href="#pricing">المزيد / تفاصيل</a></p>
         </div>
       </div>
 
@@ -976,7 +1063,11 @@
             </div>
           </div>
 
-          <div style="text-align:center; margin-top:40px;">
+          <div class="decision-prompt">
+            هل هذا هو وضعك الآن؟ ابدأ بجلسة تحليل لمدة 60 دقيقة تمنحك وضوحًا قبل أي خطوة.
+          </div>
+
+          <div style="text-align:center; margin-top:32px;">
             <a href="#contact" class="btn btn-primary">
               احصل على تقييم مهني لحالتك
             </a>
@@ -998,10 +1089,10 @@
         <p>لأن كثيرًا من القرارات لا تكون مشكلتها في التنفيذ، بل في عدم قراءة تبعاتها قبل الالتزام. والخطر الحقيقي لا يكمن في وجوده فقط، بل في تجاهله أو التقليل من أثره قبل اتخاذ القرار.</p>
 
         <ul class="check-list">
-          <li>قبل الشراكة: تحليل الالتزامات والأدوار ونقاط الضعف المحتملة.</li>
-          <li>قبل الاستثمار: تقييم المخاطر والفرص وصناعة صورة أوضح للمشهد.</li>
-          <li>قبل التقاضي: تفكيك الملف وتحديد المسارات الممكنة دون وعود أو تخمينات.</li>
-          <li>قبل التوسع: قراءة الأثر المالي والتشغيلي والتنظيمي قبل الالتزام.</li>
+          <li>قبل الشراكة: كثير من الشراكات تفشل بسبب التزامات غير واضحة، وتحليلها مسبقًا قد يمنع خسارة سنوات من العمل.</li>
+          <li>قبل الاستثمار: القرار غير المدروس قد يجمّد رأس المال، بينما التحليل المسبق يكشف المخاطر قبل وقوعها.</li>
+          <li>قبل التقاضي: الدخول في مسار قانوني دون قراءة دقيقة قد يضاعف الخسارة بدل تقليلها.</li>
+          <li>قبل التوسع: النمو غير المدروس قد يرهق المنشأة ماليًا وتشغيليًا ويُحمّلها تبعات لم تكن محسوبة.</li>
         </ul>
       </div>
 
@@ -1029,7 +1120,7 @@
           <img src="a-high-end-corporate-photograph-of-saudi_sdkVboS5SHeOY9qvo9Tj2g_rPRGkIGcQDi9UkMqOz46Yw.png" alt="اجتماع إداري احترافي">
           <div class="story-body">
             <h3>شركة متعثرة عادت للسوق</h3>
-            <p>شركة كانت متعثرة منذ 2019، ثم أُعيد ترتيب المشهد والقرار والمسار حتى عادت إلى العمل في السوق بصورة أفضل.</p>
+            <p>قبل: شركة متعثرة منذ 2019 دون نشاط فعلي.<br>بعد: إعادة هيكلة القرار التشغيلي والعودة إلى السوق خلال فترة قصيرة بصورة أكثر اتزانًا.</p>
           </div>
         </div>
 
@@ -1037,7 +1128,7 @@
           <img src="saudi-consulting-team-presenting-busines_DCJ5975nTYKZ1aFdqrsWqQ_Vybkgwp1S1-oxcdDCj_f4w_cover.png" alt="عرض أعمال واستراتيجية">
           <div class="story-body">
             <h3>شركة تقنية دخلت سوق التأمين</h3>
-            <p>شركة تقنية كانت تبحث عن مدخل صحيح إلى سوق التأمين، واليوم لديها منتجات تُعرض وتُباع على شركات التأمين.</p>
+            <p>شركة تقنية كانت تبحث عن مدخل صحيح إلى سوق التأمين، وتم بناء المسار المهني المناسب حتى أصبحت منتجاتها تُعرض على شركات التأمين.</p>
           </div>
         </div>
 
@@ -1045,7 +1136,7 @@
           <img src="saudi-business-leaders-in-a-modern-board_PuXXpsuxSHewYYAUuFBa4w_nni7S_j0RWKaGuv2mYRGfQ.jpeg" alt="اجتماع قرار ومخاطر">
           <div class="story-body">
             <h3>منع خسائر قبل التصعيد</h3>
-            <p>شركة كانت ستخسر ملايين قبل التوجه إلى مسار متعجل، ثم أُعيد توجيه القرار وبُني ملف أكثر قوة واتزانًا.</p>
+            <p>تم منع خسارة تقديرية بملايين الريالات بعد إعادة توجيه القرار قبل التصعيد القانوني وبناء ملف أكثر قوة واتزانًا.</p>
           </div>
         </div>
       </div>
@@ -1162,11 +1253,55 @@
     </div>
   </section>
 
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2>كيف نعمل</h2>
+        <p>آلية واضحة تضمن لك فهمًا أفضل للحالة أو القرار قبل الانتقال إلى أي خطوة مؤثرة.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step">1</div>
+          <h3>استلام الطلب</h3>
+          <p>نستقبل طلبك ونفهم طبيعة الملف أو القرار المطلوب تحليله والهدف من الاستشارة.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">2</div>
+          <h3>مراجعة أولية</h3>
+          <p>نراجع المعطيات الأساسية ونحدد النقاط المؤثرة قبل الجلسة أو قبل الانتقال إلى التحليل الأعمق.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">3</div>
+          <h3>جلسة تحليل</h3>
+          <p>نناقش الحالة مباشرة، ونفكك المخاطر والخيارات والسيناريوهات التي ينبغي أخذها في الحسبان.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">4</div>
+          <h3>توصيات واضحة</h3>
+          <p>نمنحك رؤية عملية تساعدك على اتخاذ قرار أكثر اتزانًا، مع إمكانية الانتقال لاحقًا إلى خدمة أعمق عند الحاجة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="pricing">
     <div class="container">
       <div class="section-head">
         <h2>الباقات</h2>
         <p>باقات بسيطة وواضحة تساعد العميل على البدء دون تردد. الخدمات الكبيرة أو الملفات المركبة يمكن أن تنتقل لاحقًا إلى عرض سعر مخصص.</p>
+      </div>
+
+      <div class="pricing-guide">
+        <strong>كيف تختار الباقة المناسبة؟</strong>
+        <p>
+          استفسار سريع → استشارة سريعة (350 ريال)<br>
+          قرار مهم أو ملف يحتاج وضوحًا أكبر → جلسة تحليل ملف (750 ريال)<br>
+          نزاع أو قضية أو ملف تصعيدي → تحليل أولي قبل التقاضي (1500 ريال)
+        </p>
       </div>
 
       <div class="pricing-grid">
@@ -1221,7 +1356,7 @@
     <div class="container">
       <div class="section-head">
         <h2>من نحن</h2>
-        <p>شركة سعودية متخصصة في الاستشارات الإدارية وتطوير الأعمال، تعمل في المرحلة التي تسبق الالتزام، حيث تتشكل القرارات المؤثرة على مسار المشاريع واستدامتها.</p>
+        <p>شركة سعودية متخصصة في الاستشارات وتطوير الأعمال، تعمل في المرحلة التي تسبق الالتزام، حيث تتشكل القرارات المؤثرة على مسار المشاريع واستدامتها.</p>
       </div>
 
       <div class="about-grid">
@@ -1229,6 +1364,9 @@
           <h3>فلسفتنا</h3>
           <p>في بيئات الأعمال المعقدة، لا تكمن التحديات الحقيقية في التنفيذ بقدر ما تكمن في القرار الذي يسبقه. لذلك تقوم فلسفتنا على تهيئة القرار، قراءة المشهد، تحليل المخاطر، وبناء الصورة الشاملة قبل الانتقال إلى الالتزام.</p>
           <p>نعمل مع الأفراد وأصحاب الشركات والجهات التي تبحث عن الاستقرار، وتواجه إشكاليات، وتسعى إلى النمو والتوسع، وتحتاج إلى وضوح مهني قبل أي خطوة مؤثرة مع التزام كامل بالخصوصية.</p>
+          <div class="about-lead">
+            يقود العمل خبرة تراكمية تتجاوز 28 عامًا في مجالات التأمين، إدارة المخاطر، وتحليل القرارات التشغيلية والاستراتيجية.
+          </div>
         </div>
 
         <div class="about-card">
@@ -1255,7 +1393,7 @@
         <div class="company-card">
           <h3>البيانات النظامية</h3>
           <ul class="company-list">
-            <li><strong>اسم المنشأة:</strong> شركة الخطوات السبع للاستشارات وتطوير الاعمال</li>
+            <li><strong>اسم المنشأة:</strong> شركة الخطوات السبع للاستشارات وتطوير الأعمال</li>
             <li><strong>الكيان النظامي:</strong> شركة ذات مسؤولية محدودة</li>
             <li><strong>السجل التجاري:</strong> 1010835180</li>
             <li><strong>الرقم الموحد:</strong> 7031380384</li>
@@ -1341,7 +1479,7 @@
 
       <div class="privacy-box">
         <h3>سياسة الخصوصية</h3>
-        <p>نحن في شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال نولي خصوصية معلومات عملائنا أهمية عالية، ونلتزم بحماية جميع البيانات التي يتم مشاركتها معنا وفق أعلى معايير المهنية والسرية.</p>
+        <p>نحن في شركة الخطوات السبع للاستشارات وتطوير الأعمال نولي خصوصية معلومات عملائنا أهمية عالية، ونلتزم بحماية جميع البيانات التي يتم مشاركتها معنا وفق أعلى معايير المهنية والسرية.</p>
         <ul>
           <li>قد نقوم بجمع بعض البيانات الأساسية مثل الاسم ورقم التواصل والبريد الإلكتروني وتفاصيل عامة عن الطلب أو الاستشارة، وذلك بهدف تقديم الخدمة بشكل مهني وفعّال.</li>
           <li>تُستخدم المعلومات المقدمة للتواصل مع العميل، وتقديم الخدمة المطلوبة، وتحسين جودة الخدمات المقدمة.</li>
@@ -1373,7 +1511,9 @@
     </div>
 
     <div class="footer-meta">
-      <div>شركة الخطوات السبع للاستشارات وتطوير الاعمال — سجل تجاري: 1010835180</div>
+      <div>info@7stepsconsult.com</div>
+      <div>منصة استشارية متخصصة في إدارة المخاطر وصناعة القرار قبل الالتزام</div>
+      <div>شركة الخطوات السبع للاستشارات وتطوير الأعمال — سجل تجاري: 1010835180</div>
       <div>الرياض، المملكة العربية السعودية — هاتف: 0559995535</div>
       <div>© 2026 جميع الحقوق محفوظة</div>
     </div>
