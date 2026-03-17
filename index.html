@@ -14,12 +14,14 @@
       --navy-2:#0e2958;
       --blue:#1d4ed8;
       --gold:#b7925e;
+      --green:#1fa855;
       --bg:#f6f8fc;
       --white:#fff;
       --text:#162133;
       --muted:#667388;
       --line:#e7edf5;
       --soft:#edf4ff;
+      --soft-gold:#fff8ef;
       --shadow:0 16px 40px rgba(8,25,54,.08);
       --r:22px;
       --max:1200px;
@@ -31,7 +33,7 @@
     img{display:block;max-width:100%}
     .container{width:min(var(--max),calc(100% - 32px));margin:auto}
 
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .topbar{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .topbar-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:12px 0}
     .brand{display:flex;align-items:center;gap:14px}
     .brand-logo{width:62px;height:62px;border-radius:16px;background:#fff;padding:6px;object-fit:contain;box-shadow:0 10px 24px rgba(8,25,54,.08)}
@@ -42,38 +44,38 @@
     .nav a:hover{background:var(--soft);color:var(--blue)}
     .nav .cta{background:var(--navy);color:#fff}
 
-    .hero{position:relative;overflow:hidden;padding:76px 0 64px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.72),rgba(8,25,54,.62)),url('hero.jpeg') center/cover no-repeat;opacity:.28}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .hero{position:relative;overflow:hidden;padding:78px 0 64px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.76),rgba(8,25,54,.64)),url('hero.jpeg') center/cover no-repeat;opacity:.34}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
     .eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:.92rem;font-weight:800;margin-bottom:18px}
-    .hero h1{font-size:clamp(2.1rem,4.8vw,4rem);line-height:1.18;font-weight:900;margin-bottom:16px}
-    .hero h1 span{display:block;font-size:.54em;line-height:1.45;color:#dce8ff;margin-top:14px;font-weight:700}
-    .hero p{color:rgba(255,255,255,.9);max-width:760px;margin-bottom:22px;font-size:1.05rem}
+    .hero h1{font-size:clamp(2.2rem,4.9vw,4rem);line-height:1.18;font-weight:900;margin-bottom:16px}
+    .hero h1 span{display:block;font-size:.53em;line-height:1.5;color:#dce8ff;margin-top:14px;font-weight:700}
+    .hero p{color:rgba(255,255,255,.92);max-width:760px;margin-bottom:22px;font-size:1.05rem}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:800;transition:.2s ease;border:1px solid transparent}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:800;transition:.2s ease;border:1px solid transparent;cursor:pointer}
     .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 28px rgba(29,78,216,.22)}
     .btn-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
     .btn-dark{background:var(--navy);color:#fff}
-    .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.22)}
-    .btn-whatsapp{background:#1fa855;color:#fff;box-shadow:0 14px 28px rgba(31,168,85,.28)}
+    .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.24)}
+    .btn-whatsapp{background:var(--green);color:#fff;box-shadow:0 14px 28px rgba(31,168,85,.28)}
     .hero-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     .meta{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.95rem}
     .hero-contact{display:flex;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,.86);font-weight:700;font-size:.96rem;margin-top:16px}
     .visual-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
-    .visual-image{position:relative;overflow:hidden;min-height:420px;border-radius:22px}
+    .visual-image{position:relative;overflow:hidden;min-height:430px;border-radius:22px}
     .visual-image img{width:100%;height:100%;object-fit:cover}
     .hero-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,25,54,.84),rgba(8,25,54,.18));display:flex;align-items:flex-end;padding:22px}
     .hero-card-overlay strong{display:block;font-size:1.18rem;font-weight:900;margin-bottom:6px}
     .hero-card-overlay span{color:rgba(255,255,255,.88)}
 
-    section{padding:76px 0}
-    .section-head{max-width:780px;text-align:center;margin:0 auto 32px}
-    .section-head h2{font-size:clamp(1.75rem,3vw,2.5rem);color:var(--navy);font-weight:900;margin-bottom:12px}
-    .section-head p{color:var(--muted);font-size:1.03rem}
+    section{padding:78px 0}
+    .section-head{max-width:800px;text-align:center;margin:0 auto 32px}
+    .section-head h2{font-size:clamp(1.8rem,3vw,2.55rem);color:var(--navy);font-weight:900;margin-bottom:12px}
+    .section-head p{color:var(--muted);font-size:1.04rem}
 
-    .metrics-grid,.services-grid,.pricing-grid,.contact-grid,.stats{display:grid;gap:18px}
+    .metrics-grid,.services-grid,.pricing-grid,.contact-grid,.stats,.decision-grid{display:grid;gap:18px}
     .metrics-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:-18px}
-    .metric,.service-card,.pricing-card,.content-box,.about-card,.contact-card,.detail-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+    .metric,.service-card,.pricing-card,.content-box,.about-card,.contact-card,.detail-card,.decision-box,.privacy-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
     .metric{padding:20px}
     .metric strong{display:block;color:var(--blue);font-size:1.7rem;font-weight:900}
     .metric span{color:var(--muted);font-weight:700;font-size:.94rem}
@@ -85,13 +87,25 @@
     .service-card p{color:var(--muted);margin-bottom:12px}
     .service-card a{color:var(--blue);font-weight:800}
 
+    .decision-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:30px;box-shadow:var(--shadow)}
+    .decision-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.72),rgba(8,25,54,.64)),url('a-professional-photograph-of-saudi-execu_EO9m2HvHQTCLvO6DUrHMVQ_Qnrr_ldCQI2d40cUr5sStQ_cover.jpeg') center/cover no-repeat;opacity:.25}
+    .decision-inner{position:relative;z-index:1;padding:38px;color:#fff}
+    .decision-head{max-width:760px;margin-bottom:24px}
+    .decision-head h2{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:900;margin-bottom:10px}
+    .decision-head p{color:rgba(255,255,255,.9)}
+    .decision-grid{grid-template-columns:1fr 1fr}
+    .decision-box{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);padding:20px;color:#fff}
+    .decision-box strong{display:block;font-size:1.06rem;margin-bottom:8px}
+    .decision-box p{color:rgba(255,255,255,.84)}
+    .decision-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
     .split,.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
     .content-box,.about-card{padding:28px}
     .content-box h3,.about-card h3{color:var(--navy);font-size:1.28rem;font-weight:900;margin-bottom:12px}
     .content-box p,.about-card p{color:var(--muted);margin-bottom:16px}
     .check-list{display:grid;gap:12px}
     .check-list li{list-style:none;background:#f9fbff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-    .image-box{position:relative;overflow:hidden;min-height:420px;border-radius:28px;box-shadow:var(--shadow)}
+    .image-box{position:relative;overflow:hidden;min-height:430px;border-radius:28px;box-shadow:var(--shadow)}
     .image-box img{width:100%;height:100%;object-fit:cover}
     .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,25,54,.76),rgba(8,25,54,.12));display:flex;align-items:flex-end;padding:24px}
     .overlay strong{display:block;color:#fff;font-size:1.2rem;font-weight:900;margin-bottom:6px}
@@ -102,6 +116,13 @@
     .detail-card h3{color:var(--navy);font-size:1.14rem;font-weight:900;margin-bottom:8px}
     .detail-card p{color:var(--muted);margin-bottom:10px}
     .detail-card ul{padding-right:18px;display:grid;gap:8px}
+
+    .stories-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .story-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+    .story-card img{width:100%;height:220px;object-fit:cover}
+    .story-card .story-body{padding:20px}
+    .story-card h3{color:var(--navy);font-size:1.08rem;font-weight:900;margin-bottom:8px}
+    .story-card p{color:var(--muted)}
 
     .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     .pricing-card{position:relative;padding:28px}
@@ -121,7 +142,7 @@
     .stat span{color:var(--muted);font-weight:700;font-size:.94rem}
 
     .contact-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(8,25,54,.96),rgba(14,41,88,.94));border-radius:30px;box-shadow:var(--shadow)}
-    .contact-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.78),rgba(8,25,54,.72)),url('Contact.jpeg') center/cover no-repeat;opacity:.36}
+    .contact-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.78),rgba(8,25,54,.72)),url('Contact.jpeg') center/cover no-repeat;opacity:.34}
     .contact-inner{position:relative;z-index:1;color:#fff;padding:36px}
     .contact-inner h2{font-size:2rem;font-weight:900;margin-bottom:12px}
     .contact-inner p{color:rgba(255,255,255,.88);margin-bottom:20px;max-width:760px}
@@ -129,24 +150,34 @@
     .contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:18px}
     .contact-card strong{display:block;margin-bottom:6px}
     .contact-card span,.contact-card a{color:#eef4ff;word-break:break-word}
-    .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .consent{font-size:.92rem;color:rgba(255,255,255,.82);max-width:880px}
+    .consent a{color:#fff;text-decoration:underline}
+
+    .privacy-box{padding:30px}
+    .privacy-box h3{color:var(--navy);font-size:1.25rem;font-weight:900;margin-bottom:14px}
+    .privacy-box p{color:var(--muted);margin-bottom:14px}
+    .privacy-box ul{padding-right:20px;display:grid;gap:10px;color:var(--muted);margin-bottom:14px}
 
     footer{text-align:center;color:var(--muted);padding:30px 0 42px;font-size:.95rem}
-    .whatsapp-float{position:fixed;left:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1fa855;color:#fff;font-size:1.55rem;font-weight:900;box-shadow:0 14px 26px rgba(31,168,85,.32)}
+    .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+    .footer-links a{font-weight:700}
+    .whatsapp-float{position:fixed;left:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;font-size:1.55rem;font-weight:900;box-shadow:0 14px 26px rgba(31,168,85,.32)}
 
     @media (max-width:1100px){
-      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid{grid-template-columns:1fr 1fr}
+      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid,.stories-grid,.decision-grid{grid-template-columns:1fr 1fr}
     }
     @media (max-width:760px){
       .topbar-inner{justify-content:center}
       .brand{justify-content:center}
       .brand-text{text-align:center}
       .nav{justify-content:center}
-      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid,.hero-meta,.stats{grid-template-columns:1fr}
+      .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid,.hero-meta,.stats,.stories-grid,.decision-grid{grid-template-columns:1fr}
       .hero{padding:60px 0 50px}
       .hero h1{font-size:2rem}
       .visual-image,.image-box{min-height:320px}
-      .contact-inner{padding:24px}
+      .story-card img{height:200px}
+      .contact-inner,.decision-inner{padding:24px}
     }
   </style>
 </head>
@@ -164,6 +195,7 @@
 
       <nav class="nav">
         <a href="#services">الخدمات</a>
+        <a href="#decision">اتخاذ القرار</a>
         <a href="#pricing">الباقات</a>
         <a href="#about">من نحن</a>
         <a href="#contact" class="cta">تواصل معنا</a>
@@ -177,7 +209,7 @@
         <div class="eyebrow">بيت خبرة استراتيجي لإدارة القرار وتحليل المخاطر</div>
         <h1>
           القرار الصحيح لا يبدأ بالحلول… بل بفهم المخاطر أولًا
-          <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع.</span>
+          <span>نحلل الخطر، نفكك التعقيد، ونهيئ القرار قبل أن يتحول إلى خسارة أو نزاع أو التزام غير محسوب.</span>
         </h1>
         <p>
           تعمل شركة الخطوات السبع في المرحلة التي تسبق الالتزام، حيث تُبنى القرارات المؤثرة على مسار المشاريع، الشراكات، التوسع، والنزاعات. دورنا أن نمنحك وضوحًا مهنيًا قبل أي خطوة مكلفة، مع تركيز أساسي على إدارة المخاطر وصناعة القرار قبل التنفيذ.
@@ -204,11 +236,11 @@
       <div class="hero-visual">
         <div class="visual-card">
           <div class="visual-image">
-            <img src="hero.jpeg" alt="فريق استشاري سعودي">
+            <img src="a-professional-photograph-capturing-an-i_95_76xL7SDS3xvq_coWMnQ_UMwypeIvRp-313D-ScmpWQ.png" alt="جلسة استشارية مباشرة">
             <div class="hero-card-overlay">
               <div>
-                <strong>استشارات مبنية على التحليل لا الانطباع</strong>
-                <span>هوية سعودية حديثة، ومنهج مهني يسبق القرار قبل الالتزام.</span>
+                <strong>وضوح يسبق الالتزام</strong>
+                <span>جلسات مهنية تساعدك على رؤية المشهد قبل اتخاذ القرار.</span>
               </div>
             </div>
           </div>
@@ -244,6 +276,31 @@
     </div>
   </section>
 
+  <section id="decision">
+    <div class="container">
+      <div class="decision-wrap">
+        <div class="decision-inner">
+          <div class="decision-head">
+            <h2>اتخاذ القرار لا يبدأ بالحسم… بل بوضوح الصورة</h2>
+            <p>كثير من القرارات لا تكون مشكلتها في التنفيذ، بل في ضعف الرؤية قبل الالتزام. هنا يأتي دورنا: نحلل المعطيات، نكشف المخاطر، ونساعدك على اختيار المسار الأنسب قبل أن تتحول الخطوة إلى خسارة أو نزاع أو التزام غير محسوب.</p>
+          </div>
+
+          <div class="decision-grid">
+            <div class="decision-box"><strong>هل تستمر أم تتوقف؟</strong><p>عندما يكون القرار مكلفًا والنتائج غير واضحة، نساعدك على قراءة المشهد قبل الحسم.</p></div>
+            <div class="decision-box"><strong>هل تقبل التسوية أم ترفضها؟</strong><p>عندما تبدو الخيارات ممكنة لكن أثر كل خيار مختلف، نوضح لك ما لا يظهر من النظرة الأولى.</p></div>
+            <div class="decision-box"><strong>هل تدخل المشروع أم تؤجل؟</strong><p>عندما تكون الفرصة مغرية لكن المخاطر غير مكتملة الصورة، نربط القرار بتبعاته المحتملة.</p></div>
+            <div class="decision-box"><strong>هل هذا هو المسار الأنسب؟</strong><p>عندما تتعدد البدائل وتغيب الرؤية الكاملة، نعيد ترتيب المعطيات أمامك لاتخاذ قرار أكثر اتزانًا.</p></div>
+          </div>
+
+          <div class="decision-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">ابدأ بتحليل قرارك</a>
+            <a class="btn btn-outline" href="#pricing">اختر الباقة المناسبة</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container split">
       <div class="content-box">
@@ -258,7 +315,7 @@
       </div>
 
       <div class="image-box">
-        <img src="about.jpeg" alt="اجتماع استشاري سعودي">
+        <img src="saudi-business-professionals-analyzing-i_a7G5rwp4TCeZ9ZORVUJ2LQ_xBrLsxUsT4eiUqoaw_0wnQ.png" alt="تحليل مخاطر وملفات">
         <div class="overlay">
           <div>
             <strong>إدارة المخاطر أولًا</strong>
@@ -275,13 +332,19 @@
         <h2>حالات من الواقع</h2>
         <p>نماذج مختصرة تعكس طبيعة القيمة التي يمكن أن تضيفها القراءة المهنية للمشهد قبل التورط في قرار غير مدروس.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card"><h3>شركة متعثرة عادت للسوق</h3><p>شركة كانت متعثرة منذ 2019، ثم أُعيد ترتيب المشهد والقرار والمسار حتى عادت إلى العمل في السوق بصورة أفضل.</p></div>
-        <div class="service-card"><h3>ملف مالي كبير بعد توقف النشاط</h3><p>شركة انتهى نشاطها، لكن القراءة المهنية للملف أعادت بناء موقفها وأصبح لديها مطالبة مالية كبيرة قيد المتابعة.</p></div>
-        <div class="service-card"><h3>شركة تقنية دخلت سوق التأمين</h3><p>شركة تقنية كانت تبحث عن مدخل صحيح إلى سوق التأمين، واليوم لديها منتجات تُعرض وتُباع على شركات التأمين.</p></div>
-        <div class="service-card"><h3>مركز طبي استعاد موقعه التنافسي</h3><p>مركز طبي كان قريبًا من الخروج من المنافسة، ثم أُعيدت قراءة التشغيل والقرار فعاد إلى السوق بشكل أقوى.</p></div>
-        <div class="service-card"><h3>منع خسائر قبل التصعيد</h3><p>شركة كانت ستخسر ملايين قبل التوجه إلى المسار القضائي، ثم أُعيد توجيه القرار وبُني ملف أكثر قوة واتزانًا.</p></div>
-        <div class="service-card"><h3>قرارات أوضح تحت الضغط</h3><p>في حالات كثيرة، القيمة لم تكن في الحل السريع، بل في منع العميل من اتخاذ قرار متسرع تحت ضغط الوقت أو الأطراف الأخرى.</p></div>
+      <div class="stories-grid">
+        <div class="story-card">
+          <img src="a-high-end-corporate-photograph-of-saudi_sdkVboS5SHeOY9qvo9Tj2g_rPRGkIGcQDi9UkMqOz46Yw.png" alt="اجتماع إداري احترافي">
+          <div class="story-body"><h3>شركة متعثرة عادت للسوق</h3><p>شركة كانت متعثرة منذ 2019، ثم أُعيد ترتيب المشهد والقرار والمسار حتى عادت إلى العمل في السوق بصورة أفضل.</p></div>
+        </div>
+        <div class="story-card">
+          <img src="saudi-consulting-team-presenting-busines_DCJ5975nTYKZ1aFdqrsWqQ_Vybkgwp1S1-oxcdDCj_f4w_cover.png" alt="عرض أعمال واستراتيجية">
+          <div class="story-body"><h3>شركة تقنية دخلت سوق التأمين</h3><p>شركة تقنية كانت تبحث عن مدخل صحيح إلى سوق التأمين، واليوم لديها منتجات تُعرض وتُباع على شركات التأمين.</p></div>
+        </div>
+        <div class="story-card">
+          <img src="saudi-business-leaders-in-a-modern-board_PuXXpsuxSHewYYAUuFBa4w_nni7S_j0RWKaGuv2mYRGfQ.jpeg" alt="اجتماع قرار ومخاطر">
+          <div class="story-body"><h3>منع خسائر قبل التصعيد</h3><p>شركة كانت ستخسر ملايين قبل التوجه إلى مسار متعجل، ثم أُعيد توجيه القرار وبُني ملف أكثر قوة واتزانًا.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -393,12 +456,49 @@
             <a class="btn btn-outline" href="mailto:info@7stepsconsult.com">أرسل بريدًا الآن</a>
             <a class="btn btn-whatsapp" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a>
           </div>
+
+          <div class="consent">باستخدامك لهذا الموقع أو بطلبك لأي من خدماتنا، فإنك تقر بموافقتك على <a href="#privacy">سياسة الخصوصية</a> و<a href="#privacy">الشروط والأحكام</a> وما يطرأ عليهما من تحديثات، بما في ذلك ما يتعلق بأمن المعلومات وطرق معالجة البيانات ضمن الأغراض المهنية والبحثية والتطويرية الداخلية.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="privacy">
+    <div class="container">
+      <div class="section-head">
+        <h2>سياسة الخصوصية والشروط والأحكام</h2>
+        <p>سياسة عامة توضح منهج التعامل مع المعلومات والبيانات عند استخدام الموقع أو طلب الخدمات.</p>
+      </div>
+      <div class="privacy-box">
+        <h3>سياسة الخصوصية</h3>
+        <p>نحن في شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال نولي خصوصية معلومات عملائنا أهمية عالية، ونلتزم بحماية جميع البيانات التي يتم مشاركتها معنا وفق أعلى معايير المهنية والسرية.</p>
+        <ul>
+          <li>قد نقوم بجمع بعض البيانات الأساسية مثل الاسم ورقم التواصل والبريد الإلكتروني وتفاصيل عامة عن الطلب أو الاستشارة، وذلك بهدف تقديم الخدمة بشكل مهني وفعّال.</li>
+          <li>تُستخدم المعلومات المقدمة للتواصل مع العميل، وتقديم الخدمة المطلوبة، وتحسين جودة الخدمات المقدمة.</li>
+          <li>كما قد يتم استخدام المعلومات العامة غير الحساسة لأغراض البحث والتطوير الداخلي للشركة، بما يساهم في تحسين الخدمات دون المساس بسرية أو خصوصية العميل.</li>
+          <li>نلتزم باتخاذ الإجراءات اللازمة لحماية معلومات العملاء من الوصول غير المصرح به أو الاستخدام غير المشروع.</li>
+          <li>نؤكد التزامنا الكامل بسرية جميع المعلومات والملفات التي يتم مشاركتها معنا، ولا يتم الإفصاح عنها لأي طرف ثالث إلا بموافقة العميل أو بموجب متطلبات نظامية.</li>
+        </ul>
+        <h3>الشروط والأحكام</h3>
+        <ul>
+          <li>استخدام الموقع أو طلب أي من الخدمات يعد موافقة ضمنية على هذه السياسة وعلى الشروط والأحكام وما يطرأ عليها من تحديثات لاحقة.</li>
+          <li>المحتوى الوارد في الموقع ذو طبيعة تعريفية عامة ولا يُعد التزامًا تعاقديًا مستقلًا ما لم يتم الاتفاق على ذلك صراحة ضمن طلب خدمة أو عرض أو اتفاق منفصل.</li>
+          <li>تحتفظ الشركة بحق تحديث أو تعديل محتوى الموقع أو سياسة الخصوصية أو الشروط والأحكام في أي وقت، ويُعد استمرار الاستخدام قبولًا بالتحديثات المنشورة.</li>
+          <li>يلتزم طالب الخدمة بتقديم معلومات صحيحة ودقيقة بقدر الإمكان، ويقر بأن أي قرار نهائي يتخذه بعد الاستشارة يظل مرتبطًا بالمعطيات المتاحة وقت الطلب.</li>
+          <li>في حال طلب الخدمة، فإن العميل يوافق أيضًا على ما يتعلق بأمن المعلومات والآليات المهنية المعتمدة في التواصل وتبادل المعلومات والملفات.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <footer>
+    <div class="footer-links">
+      <a href="#services">الخدمات</a>
+      <a href="#decision">اتخاذ القرار</a>
+      <a href="#pricing">الباقات</a>
+      <a href="#about">من نحن</a>
+      <a href="#privacy">سياسة الخصوصية</a>
+    </div>
     © 2026 شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال — جميع الحقوق محفوظة
   </footer>
 
