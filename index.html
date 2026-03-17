@@ -47,10 +47,13 @@
     .hero{position:relative;overflow:hidden;padding:78px 0 64px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,25,54,.76),rgba(8,25,54,.64)),url('hero.jpeg') center/cover no-repeat;opacity:.34}
     .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-    .eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:.92rem;font-weight:800;margin-bottom:18px}
-    .hero h1{font-size:clamp(2.2rem,4.9vw,4rem);line-height:1.18;font-weight:900;margin-bottom:16px}
-    .hero h1 span{display:block;font-size:.53em;line-height:1.5;color:#dce8ff;margin-top:14px;font-weight:700}
-    .hero p{color:rgba(255,255,255,.92);max-width:760px;margin-bottom:22px;font-size:1.05rem}
+.eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:14px;font-weight:800;margin-bottom:16px}
+
+.hero h1{font-size:44px;line-height:1.35;font-weight:800;margin-bottom:18px;letter-spacing:-0.5px}
+
+.hero h1 span{display:block;font-size:.48em;line-height:1.6;color:#dce8ff;margin-top:12px;font-weight:700}
+
+.hero p{color:rgba(255,255,255,.92);max-width:520px;margin-bottom:22px;font-size:18px;line-height:1.9}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:800;transition:.2s ease;border:1px solid transparent;cursor:pointer}
     .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 28px rgba(29,78,216,.22)}
@@ -174,7 +177,7 @@
       .nav{justify-content:center}
       .hero-grid,.metrics-grid,.services-grid,.split,.pricing-grid,.about-grid,.contact-grid,.hero-meta,.stats,.stories-grid,.decision-grid{grid-template-columns:1fr}
       .hero{padding:60px 0 50px}
-      .hero h1{font-size:2rem}
+      .hero h1{font-size:28px;line-height:1.45}
       .visual-image,.image-box{min-height:320px}
       .story-card img{height:200px}
       .contact-inner,.decision-inner{padding:24px}
