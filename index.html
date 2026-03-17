@@ -609,17 +609,34 @@
 نمنحك وضوحًا كاملًا قبل أي خطوة، لتتخذ قرارك بثقة وبأقل مخاطرة ممكنة.
 </p>
 
-          <div class="contact-grid">
-            <div class="contact-card"><strong>الهاتف</strong><span>+966559995535</span></div>
-            <div class="contact-card"><strong>البريد الإلكتروني</strong><a href="mailto:info@7stepsconsult.com">info@7stepsconsult.com</a></div>
-            <div class="contact-card"><strong>واتساب أعمال</strong><a href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">راسلنا مباشرة</a></div>
-          </div>
+         <form id="contactForm" style="margin-top:20px;">
 
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="#contact">ابدأ تقييم حالتك الآن</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a>
-            <p style="margin-top:15px; font-size:14px; opacity:0.8;">استجابة سريعة • سرية تامة • تقييم مهني دقيق</p>
-          </div>
+<input type="text" id="name" placeholder="الاسم الكامل" required 
+style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:none;">
+
+<input type="tel" id="phone" placeholder="رقم الجوال" required 
+style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:none;">
+
+<input type="email" id="email" placeholder="البريد الإلكتروني (اختياري)" 
+style="width:100%; padding:12px; margin-bottom:10px; border-radius:8px; border:none;">
+
+<select id="package" required 
+style="width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:none;">
+<option value="">اختر الباقة</option>
+<option value="إدارة المخاطر وصناعة القرار">إدارة المخاطر وصناعة القرار</option>
+<option value="ما قبل التقاضي">ما قبل التقاضي</option>
+<option value="التأمين والتعويضات">التأمين والتعويضات</option>
+<option value="الاستشارات الاستراتيجية">الاستشارات الاستراتيجية</option>
+<option value="تطوير الأعمال">تطوير الأعمال</option>
+<option value="الاستشارات المباشرة">الاستشارات المباشرة</option>
+</select>
+
+<button type="submit" 
+style="width:100%; padding:14px; background:#2563eb; color:white; border:none; border-radius:8px; font-size:16px;">
+ابدأ تقييم حالتك الآن
+</button>
+
+</form>
 
           <div class="consent">باستخدامك لهذا الموقع أو بطلبك لأي من خدماتنا، فإنك تقر بموافقتك على <a href="#privacy">سياسة الخصوصية</a> و<a href="#privacy">الشروط والأحكام</a> وما يطرأ عليهما من تحديثات، بما في ذلك ما يتعلق بأمن المعلومات وطرق معالجة البيانات ضمن الأغراض المهنية والبحثية والتطويرية الداخلية.</div>
         </div>
@@ -667,6 +684,48 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer" aria-label="واتساب">✆</a>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
 
+document.getElementById("contactForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var email = document.getElementById("email").value;
+var packageValue = document.getElementById("package").value;
+
+var message = "السلام عليكم،\n";
+message += "معك " + name + "\n";
+message += "رقم الجوال: " + phone + "\n";
+if (email) {
+message += "البريد الإلكتروني: " + email + "\n";
+}
+message += "وأرغب باستشارة بحسب الباقة: " + packageValue;
+
+var url = "https://wa.me/966559995535?text=" + encodeURIComponent(message);
+window.open(url, "_blank");
+});
+});
+</script>
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var packageValue = document.getElementById("package").value;
+
+  var message = "السلام عليكم،\n";
+  message += "معك " + name + "\n";
+  message += "رقم الجوال: " + phone + "\n";
+  if (email) {
+    message += "البريد الإلكتروني: " + email + "\n";
+  }
+  message += "وأرغب باستشارة بحسب الباقة: " + packageValue;
+
+  var url = "https://wa.me/966559995535?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+});
+</script>
 </body>
 </html>
