@@ -257,7 +257,8 @@
     .pricing-grid,
     .contact-grid,
     .stats,
-    .decision-grid{
+    .decision-grid,
+    .company-grid{
       display:grid;
       gap:18px
     }
@@ -275,7 +276,8 @@
     .contact-card,
     .detail-card,
     .decision-box,
-    .privacy-box{
+    .privacy-box,
+    .company-card{
       background:#fff;
       border:1px solid var(--line);
       border-radius:var(--r);
@@ -559,6 +561,53 @@
       max-width:88%;
     }
 
+    .company-grid{
+      grid-template-columns:1fr 1fr;
+      align-items:stretch;
+    }
+
+    .company-card{
+      padding:28px;
+    }
+
+    .company-card h3{
+      color:var(--navy);
+      font-size:1.22rem;
+      font-weight:900;
+      margin-bottom:14px;
+    }
+
+    .company-list,
+    .license-list{
+      display:grid;
+      gap:12px;
+      list-style:none;
+    }
+
+    .company-list li,
+    .license-list li{
+      background:#f9fbff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+      color:var(--text);
+    }
+
+    .company-list strong,
+    .license-list strong{
+      color:var(--navy);
+    }
+
+    .company-note{
+      margin-top:18px;
+      background:var(--soft-gold);
+      border:1px solid #f1e2c8;
+      border-radius:16px;
+      padding:14px 16px;
+      color:#6e552a;
+      font-size:.96rem;
+    }
+
     .contact-wrap{
       position:relative;
       overflow:hidden;
@@ -637,6 +686,11 @@
     .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:10px}
     .footer-links a{font-weight:700}
 
+    .footer-meta{
+      display:grid;
+      gap:6px;
+    }
+
     .whatsapp-float{
       position:fixed;
       left:18px;
@@ -664,7 +718,8 @@
       .about-grid,
       .contact-grid,
       .stories-grid,
-      .decision-grid{
+      .decision-grid,
+      .company-grid{
         grid-template-columns:1fr 1fr
       }
     }
@@ -711,7 +766,8 @@
       .hero-meta,
       .stats,
       .stories-grid,
-      .decision-grid{
+      .decision-grid,
+      .company-grid{
         grid-template-columns:1fr
       }
 
@@ -740,6 +796,7 @@
         <a href="#decision">اتخاذ القرار</a>
         <a href="#pricing">الباقات</a>
         <a href="#about">من نحن</a>
+        <a href="#company-info">بيانات الشركة</a>
         <a href="#contact" class="cta">تواصل معنا</a>
       </nav>
     </div>
@@ -1187,6 +1244,42 @@
     </div>
   </section>
 
+  <section id="company-info">
+    <div class="container">
+      <div class="section-head">
+        <h2>بيانات الشركة</h2>
+        <p>بيانات التعريف النظامية الخاصة بشركة الخطوات السبع للاستشارات وتطوير الأعمال.</p>
+      </div>
+
+      <div class="company-grid">
+        <div class="company-card">
+          <h3>البيانات النظامية</h3>
+          <ul class="company-list">
+            <li><strong>اسم المنشأة:</strong> شركة الخطوات السبع للاستشارات وتطوير الاعمال</li>
+            <li><strong>الكيان النظامي:</strong> شركة ذات مسؤولية محدودة</li>
+            <li><strong>السجل التجاري:</strong> 1010835180</li>
+            <li><strong>الرقم الموحد:</strong> 7031380384</li>
+            <li><strong>رقم الهاتف:</strong> 0559995535</li>
+            <li><strong>المقر:</strong> المملكة العربية السعودية - الرياض</li>
+          </ul>
+
+          <div class="company-note">
+            هذه البيانات معروضة للتعريف بالمنشأة وتسهيل التواصل والتحقق من بيانات مقدم الخدمة.
+          </div>
+        </div>
+
+        <div class="company-card">
+          <h3>الأنشطة المرخصة</h3>
+          <ul class="license-list">
+            <li><strong>702017:</strong> تقديم خدمات الاستشارات الإدارية العليا</li>
+            <li><strong>702015:</strong> العلاقات العامة والاتصال</li>
+            <li><strong>702014:</strong> إعادة تأهيل وهيكلة العمليات الإدارية والمالية والتشغيلية للمنشآت</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <div class="contact-wrap">
@@ -1275,9 +1368,15 @@
       <a href="#decision">اتخاذ القرار</a>
       <a href="#pricing">الباقات</a>
       <a href="#about">من نحن</a>
+      <a href="#company-info">بيانات الشركة</a>
       <a href="#privacy">سياسة الخصوصية</a>
     </div>
-    © 2026 شركة الخطوات السبع للاستشارات الإدارية وتطوير الأعمال — جميع الحقوق محفوظة
+
+    <div class="footer-meta">
+      <div>شركة الخطوات السبع للاستشارات وتطوير الاعمال — سجل تجاري: 1010835180</div>
+      <div>الرياض، المملكة العربية السعودية — هاتف: 0559995535</div>
+      <div>© 2026 جميع الحقوق محفوظة</div>
+    </div>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/966559995535" target="_blank" rel="noopener noreferrer" aria-label="واتساب">✆</a>
