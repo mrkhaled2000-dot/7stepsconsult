@@ -4,48 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الخطوات السبع | إدارة المخاطر وصناعة القرار</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0b1f4d;--gold:#b79255;--light:#f7f9fc}
-*{box-sizing:border-box}
-body{margin:0;font-family:Cairo;background:#fff;color:#0b1f4d;line-height:1.8}
-.container{max-width:1100px;margin:auto;padding:20px}
+:root{--navy:#0b1f4d;--gold:#b79255;--light:#f7f9fc;--text:#1c2f4a;--muted:#6c7a90}
+*{box-sizing:border-box} body{margin:0;font-family:Cairo;background:#fff;color:var(--text);line-height:1.9}
+.container{max-width:1150px;margin:auto;padding:0 20px}
+.section{padding:80px 0}
 h1,h2,h3{margin:0}
-.section{padding:80px 20px}
-.hero{background:linear-gradient(rgba(11,31,77,.9),rgba(11,31,77,.9)),url('hero.jpeg') center/cover;color:#fff;text-align:center;padding:140px 20px}
-.hero h1{font-size:48px;margin-bottom:20px}
-.hero p{color:#ddd;font-size:20px;max-width:700px;margin:auto}
-.btn{background:var(--gold);color:#fff;padding:14px 26px;border-radius:30px;text-decoration:none;font-weight:800;display:inline-block;margin-top:25px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
-.card{background:#f5f7fb;padding:20px;border-radius:15px;font-weight:600}
+.hero{background:linear-gradient(rgba(11,31,77,.85),rgba(11,31,77,.9)),url('hero.jpeg') center/cover;color:#fff;text-align:center;padding:140px 0}
+.hero img{height:60px;margin-bottom:20px}
+.hero h1{font-size:46px;margin-bottom:15px}
+.hero p{max-width:700px;margin:auto;color:#d9e0ec;font-size:19px}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:14px 26px;border-radius:30px;margin-top:20px;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:30px}
+.card{background:var(--light);padding:22px;border-radius:16px}
 .dark{background:var(--navy);color:#fff}
-.dark .card{background:rgba(255,255,255,0.08);color:#fff}
+.dark .card{background:rgba(255,255,255,.08)}
 .pricing{background:var(--navy);color:#fff;text-align:center}
-.price-card{background:#fff;color:var(--navy);padding:25px;border-radius:15px}
-.price{font-size:32px;font-weight:900;margin:10px 0}
+.price-card{background:#fff;color:var(--text);padding:26px;border-radius:18px}
 .highlight{border:3px solid var(--gold)}
-.footer{background:#071937;color:#aaa;text-align:center;padding:30px}
-.whatsapp{position:fixed;left:20px;bottom:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none}
+.price{font-size:30px;font-weight:900;margin:10px 0}
+.story{background:#fff;border:1px solid #eee;padding:18px;border-radius:14px}
+.contact{background:var(--navy);color:#fff}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-top:10px}
+.footer{text-align:center;background:#071937;color:#aaa;padding:30px}
+.whatsapp{position:fixed;left:20px;bottom:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px}
 </style>
 </head>
 <body>
 
 <section class="hero">
 <div class="container">
+<img src="7st.jpg">
 <h1>القرار الخاطئ لا يُكلفك مرة… بل يرافقك لسنوات</h1>
-<p>نحن لا نقدم استشارة فقط… بل نحلل لك المخاطر ونوضح لك الصورة قبل أن تتخذ قرارًا قد تتحمل نتائجه لاحقًا.</p>
-<a href="https://wa.me/966559995535" class="btn">ابدأ الآن عبر واتساب</a>
+<p>قد تكون أمام قرار مهم… لكن الصورة لم تكتمل بعد. نحن نساعدك على فهم المخاطر قبل أن تتحمل نتائجها.</p>
+<a href="https://wa.me/966559995535" class="btn">ابدأ عبر واتساب</a>
 </div>
 </section>
 
 <section class="section">
 <div class="container">
-<h2 style="text-align:center">لماذا يتردد القرار؟</h2>
+<h2 style="text-align:center">حالات من الواقع</h2>
 <div class="cards">
-<div class="card">عدم وضوح النتائج المحتملة</div>
-<div class="card">تشابك المعطيات والمعلومات</div>
-<div class="card">الخوف من الخسارة أو الخطأ</div>
-<div class="card">ضغط الوقت أو الأطراف الأخرى</div>
+<div class="story">شركة كانت متعثرة منذ 2019… واليوم تعمل في السوق</div>
+<div class="story">شركة توقفت… وأصبحت تمتلك مطالبة مالية كبيرة</div>
+<div class="story">شركة تقنية دخلت سوق التأمين… وأصبحت تقدم منتجات</div>
+<div class="story">مركز طبي كان على وشك الخروج… واليوم ينافس بقوة</div>
+<div class="story">شركة كانت ستخسر ملايين… وتم إعادة توجيه القرار</div>
 </div>
 </div>
 </section>
@@ -54,47 +59,32 @@ h1,h2,h3{margin:0}
 <div class="container">
 <h2 style="text-align:center">كيف نساعدك؟</h2>
 <div class="cards">
-<div class="card">تحليل شامل للوضع من جميع الزوايا</div>
-<div class="card">تحديد المخاطر المحتملة قبل وقوعها</div>
-<div class="card">توضيح الخيارات والبدائل</div>
-<div class="card">توصية واضحة تساعدك على اتخاذ القرار</div>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<h2 style="text-align:center">متى تحتاجنا؟</h2>
-<div class="cards">
-<div class="card">قبل الدخول في مشروع أو شراكة</div>
-<div class="card">عند وجود قرار مالي كبير</div>
-<div class="card">عند تعدد الخيارات وعدم وضوح الأفضل</div>
-<div class="card">عند ارتفاع المخاطر وعدم وضوح النتائج</div>
+<div class="card">نحلل الوضع من جميع الزوايا</div>
+<div class="card">نحدد المخاطر قبل وقوعها</div>
+<div class="card">نوضح الخيارات والبدائل</div>
+<div class="card">نساعدك على اتخاذ قرار واضح</div>
 </div>
 </div>
 </section>
 
 <section class="section pricing">
 <div class="container">
-<h2>اختر مستوى الوضوح المناسب لك</h2>
+<h2>اختر الخدمة المناسبة لك</h2>
 <div class="cards">
 <div class="price-card">
 <h3>استشارة سريعة</h3>
 <div class="price">750 ريال</div>
-<p>30 دقيقة</p>
-<a href="https://wa.me/966559995535" class="btn">احجز الآن</a>
+<p>توجيه سريع + فهم أولي للمخاطر</p>
 </div>
 <div class="price-card highlight">
 <h3>تحليل قبل اتخاذ القرار</h3>
 <div class="price">1000 ريال</div>
-<p>60 دقيقة</p>
-<a href="https://wa.me/966559995535" class="btn">احجز الآن</a>
+<p>تحليل أعمق + خيارات واضحة + توصية</p>
 </div>
 <div class="price-card">
 <h3>تحليل شامل</h3>
 <div class="price">1500 ريال</div>
-<p>يوم عمل</p>
-<a href="https://wa.me/966559995535" class="btn">احجز الآن</a>
+<p>قراءة كاملة + تحليل متكامل + توصية نهائية</p>
 </div>
 </div>
 </div>
@@ -102,20 +92,28 @@ h1,h2,h3{margin:0}
 
 <section class="section">
 <div class="container">
-<h2 style="text-align:center">لماذا الخطوات السبع؟</h2>
-<div class="cards">
-<div class="card">منهجية تحليل قرار احترافية</div>
-<div class="card">فهم عميق للسوق والبيئة</div>
-<div class="card">تركيز على إدارة المخاطر</div>
-<div class="card">توصيات عملية قابلة للتطبيق</div>
-</div>
+<h2 style="text-align:center">عن الخطوات السبع</h2>
+<p style="text-align:center;max-width:700px;margin:auto">نحن جهة متخصصة في تحليل المخاطر وصناعة القرار، نركز على المرحلة التي تسبق الالتزام حيث تتحدد النتائج قبل أن تبدأ.</p>
 </div>
 </section>
 
-<section class="section" id="about">
+<section class="section contact">
 <div class="container">
-<h2 style="text-align:center">عن الخطوات السبع</h2>
-<p style="text-align:center;max-width:700px;margin:auto">نحن جهة متخصصة في إدارة وتحليل المخاطر وصناعة القرار، نركز على المرحلة التي تسبق الالتزام، حيث تتحدد النتائج قبل أن تبدأ.</p>
+<h2 style="text-align:center">تواصل معنا</h2>
+<div class="cards">
+<div class="card">
+<a href="https://wa.me/966559995535" class="btn">واتساب</a>
+</div>
+<div class="card">
+<a href="mailto:info@7stepsconsult.com" class="btn">البريد الإلكتروني</a>
+</div>
+<div class="card">
+<input placeholder="الاسم">
+<input placeholder="رقم الجوال">
+<textarea placeholder="اكتب طلبك"></textarea>
+<button class="btn">إرسال</button>
+</div>
+</div>
 </div>
 </section>
 
